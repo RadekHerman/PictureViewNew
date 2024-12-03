@@ -30,12 +30,12 @@
         {
             pictureBox1 = new PictureBox();
             tableLayoutPanel1 = new TableLayoutPanel();
-            openButton = new Button();
             fullscreenButton = new Button();
             closeButton = new Button();
-            propertiesButton = new Button();
             nextButton = new Button();
+            propertiesButton = new Button();
             previousButton = new Button();
+            openButton = new Button();
             openFileDialog1 = new OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tableLayoutPanel1.SuspendLayout();
@@ -43,11 +43,14 @@
             // 
             // pictureBox1
             // 
+            pictureBox1.BackColor = SystemColors.ControlDark;
             pictureBox1.BorderStyle = BorderStyle.Fixed3D;
+            pictureBox1.Cursor = Cursors.Hand;
             pictureBox1.Dock = DockStyle.Fill;
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(800, 450);
+            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
@@ -69,29 +72,20 @@
             tableLayoutPanel1.Controls.Add(openButton, 3, 0);
             tableLayoutPanel1.Cursor = Cursors.Hand;
             tableLayoutPanel1.Dock = DockStyle.Bottom;
-            tableLayoutPanel1.Location = new Point(0, 419);
+            tableLayoutPanel1.Location = new Point(0, 399);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.Padding = new Padding(10);
             tableLayoutPanel1.RightToLeft = RightToLeft.Yes;
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Size = new Size(800, 31);
+            tableLayoutPanel1.Size = new Size(800, 51);
             tableLayoutPanel1.TabIndex = 1;
             tableLayoutPanel1.Paint += tableLayoutPanel1_Paint;
-            // 
-            // openButton
-            // 
-            openButton.AutoSize = true;
-            openButton.Location = new Point(472, 3);
-            openButton.Name = "openButton";
-            openButton.Size = new Size(82, 25);
-            openButton.TabIndex = 0;
-            openButton.Text = "Open Image";
-            openButton.UseVisualStyleBackColor = true;
             // 
             // fullscreenButton
             // 
             fullscreenButton.AutoSize = true;
-            fullscreenButton.Location = new Point(722, 3);
+            fullscreenButton.Location = new Point(712, 13);
             fullscreenButton.Name = "fullscreenButton";
             fullscreenButton.Size = new Size(75, 25);
             fullscreenButton.TabIndex = 5;
@@ -101,42 +95,54 @@
             // closeButton
             // 
             closeButton.AutoSize = true;
-            closeButton.Location = new Point(384, 3);
+            closeButton.Location = new Point(374, 13);
             closeButton.Name = "closeButton";
             closeButton.Size = new Size(82, 25);
             closeButton.TabIndex = 1;
             closeButton.Text = "Close Image";
             closeButton.UseVisualStyleBackColor = true;
-            // 
-            // propertiesButton
-            // 
-            propertiesButton.AutoSize = true;
-            propertiesButton.Location = new Point(303, 3);
-            propertiesButton.Name = "propertiesButton";
-            propertiesButton.Size = new Size(75, 25);
-            propertiesButton.TabIndex = 4;
-            propertiesButton.Text = "Properties";
-            propertiesButton.UseVisualStyleBackColor = true;
+            closeButton.Click += closeButton_Click;
             // 
             // nextButton
             // 
             nextButton.AutoSize = true;
-            nextButton.Location = new Point(560, 3);
+            nextButton.Location = new Point(550, 13);
             nextButton.Name = "nextButton";
             nextButton.Size = new Size(75, 25);
             nextButton.TabIndex = 3;
             nextButton.Text = "Next";
             nextButton.UseVisualStyleBackColor = true;
             // 
+            // propertiesButton
+            // 
+            propertiesButton.AutoSize = true;
+            propertiesButton.Location = new Point(293, 13);
+            propertiesButton.Name = "propertiesButton";
+            propertiesButton.Size = new Size(75, 25);
+            propertiesButton.TabIndex = 4;
+            propertiesButton.Text = "Properties";
+            propertiesButton.UseVisualStyleBackColor = true;
+            // 
             // previousButton
             // 
             previousButton.AutoSize = true;
-            previousButton.Location = new Point(641, 3);
+            previousButton.Location = new Point(631, 13);
             previousButton.Name = "previousButton";
             previousButton.Size = new Size(75, 25);
             previousButton.TabIndex = 2;
             previousButton.Text = "Previous";
             previousButton.UseVisualStyleBackColor = true;
+            // 
+            // openButton
+            // 
+            openButton.AutoSize = true;
+            openButton.Location = new Point(462, 13);
+            openButton.Name = "openButton";
+            openButton.Size = new Size(82, 25);
+            openButton.TabIndex = 0;
+            openButton.Text = "Open Image";
+            openButton.UseVisualStyleBackColor = true;
+            openButton.Click += openButton_Click;
             // 
             // openFileDialog1
             // 
@@ -146,8 +152,11 @@
             // 
             // Form1
             // 
+            AllowDrop = true;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoScroll = true;
+            AutoSize = true;
             ClientSize = new Size(800, 450);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(pictureBox1);
