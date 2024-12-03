@@ -32,10 +32,10 @@
             tableLayoutPanel1 = new TableLayoutPanel();
             fullscreenButton = new Button();
             closeButton = new Button();
-            nextButton = new Button();
             propertiesButton = new Button();
-            previousButton = new Button();
             openButton = new Button();
+            previousButton = new Button();
+            nextButton = new Button();
             openFileDialog1 = new OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tableLayoutPanel1.SuspendLayout();
@@ -103,17 +103,6 @@
             closeButton.UseVisualStyleBackColor = true;
             closeButton.Click += closeButton_Click;
             // 
-            // nextButton
-            // 
-            nextButton.AutoSize = true;
-            nextButton.Location = new Point(351, 13);
-            nextButton.Name = "nextButton";
-            nextButton.Size = new Size(75, 25);
-            nextButton.TabIndex = 3;
-            nextButton.Text = "Next";
-            nextButton.UseVisualStyleBackColor = true;
-            nextButton.Click += nextButton_Click;
-            // 
             // propertiesButton
             // 
             propertiesButton.AutoSize = true;
@@ -123,16 +112,6 @@
             propertiesButton.TabIndex = 4;
             propertiesButton.Text = "Properties";
             propertiesButton.UseVisualStyleBackColor = true;
-            // 
-            // previousButton
-            // 
-            previousButton.AutoSize = true;
-            previousButton.Location = new Point(270, 13);
-            previousButton.Name = "previousButton";
-            previousButton.Size = new Size(75, 25);
-            previousButton.TabIndex = 2;
-            previousButton.Text = "Previous";
-            previousButton.UseVisualStyleBackColor = true;
             // 
             // openButton
             // 
@@ -144,6 +123,28 @@
             openButton.Text = "Open Image";
             openButton.UseVisualStyleBackColor = true;
             openButton.Click += openButton_Click;
+            // 
+            // previousButton
+            // 
+            previousButton.AutoSize = true;
+            previousButton.Location = new Point(270, 13);
+            previousButton.Name = "previousButton";
+            previousButton.Size = new Size(75, 25);
+            previousButton.TabIndex = 2;
+            previousButton.Text = "Previous";
+            previousButton.UseVisualStyleBackColor = true;
+            previousButton.Click += previousButton_Click;
+            // 
+            // nextButton
+            // 
+            nextButton.AutoSize = true;
+            nextButton.Location = new Point(351, 13);
+            nextButton.Name = "nextButton";
+            nextButton.Size = new Size(75, 25);
+            nextButton.TabIndex = 3;
+            nextButton.Text = "Next";
+            nextButton.UseVisualStyleBackColor = true;
+            nextButton.Click += nextButton_Click;
             // 
             // openFileDialog1
             // 

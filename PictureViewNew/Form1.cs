@@ -79,6 +79,19 @@ namespace PictureViewNew
             pictureBox1.Image = null;
         }
 
+        private void previousButton_Click(object sender, EventArgs e)
+        {
+            if (imageFiles == null || imageFiles.Length == 0)
+            {
+                MessageBox.Show("No images loaded. Please open a folder with images first.");
+                return;
+            }
 
+            // Decrement the index and wrap around if necessary
+            currentImageIndex = (currentImageIndex - 1 + imageFiles.Length) % imageFiles.Length;
+
+            // Load the previous image
+            LoadImage(imageFiles[currentImageIndex]);
+        }
     }
 }
