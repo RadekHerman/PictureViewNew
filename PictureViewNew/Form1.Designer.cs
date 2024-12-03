@@ -31,10 +31,10 @@
             pictureBox1 = new PictureBox();
             tableLayoutPanel1 = new TableLayoutPanel();
             openButton = new Button();
-            fullButton = new Button();
-            CloseButton = new Button();
-            closeApp = new Button();
-            nextImage = new Button();
+            fullscreenButton = new Button();
+            closeButton = new Button();
+            propertiesButton = new Button();
+            nextButton = new Button();
             previousButton = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tableLayoutPanel1.SuspendLayout();
@@ -60,12 +60,12 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
-            tableLayoutPanel1.Controls.Add(fullButton, 0, 0);
-            tableLayoutPanel1.Controls.Add(CloseButton, 4, 0);
-            tableLayoutPanel1.Controls.Add(nextImage, 2, 0);
-            tableLayoutPanel1.Controls.Add(previousButton, 3, 0);
-            tableLayoutPanel1.Controls.Add(openButton, 1, 0);
-            tableLayoutPanel1.Controls.Add(closeApp, 5, 0);
+            tableLayoutPanel1.Controls.Add(fullscreenButton, 0, 0);
+            tableLayoutPanel1.Controls.Add(closeButton, 4, 0);
+            tableLayoutPanel1.Controls.Add(nextButton, 2, 0);
+            tableLayoutPanel1.Controls.Add(propertiesButton, 5, 0);
+            tableLayoutPanel1.Controls.Add(previousButton, 1, 0);
+            tableLayoutPanel1.Controls.Add(openButton, 3, 0);
             tableLayoutPanel1.Cursor = Cursors.Hand;
             tableLayoutPanel1.Dock = DockStyle.Bottom;
             tableLayoutPanel1.Location = new Point(0, 419);
@@ -80,57 +80,57 @@
             // openButton
             // 
             openButton.AutoSize = true;
-            openButton.Location = new Point(639, 3);
+            openButton.Location = new Point(472, 3);
             openButton.Name = "openButton";
-            openButton.Size = new Size(77, 25);
+            openButton.Size = new Size(82, 25);
             openButton.TabIndex = 0;
-            openButton.Text = "New Image";
+            openButton.Text = "Open Image";
             openButton.UseVisualStyleBackColor = true;
             // 
-            // fullButton
+            // fullscreenButton
             // 
-            fullButton.AutoSize = true;
-            fullButton.Location = new Point(722, 3);
-            fullButton.Name = "fullButton";
-            fullButton.Size = new Size(75, 25);
-            fullButton.TabIndex = 5;
-            fullButton.Text = "Full Screen";
-            fullButton.UseVisualStyleBackColor = true;
+            fullscreenButton.AutoSize = true;
+            fullscreenButton.Location = new Point(722, 3);
+            fullscreenButton.Name = "fullscreenButton";
+            fullscreenButton.Size = new Size(75, 25);
+            fullscreenButton.TabIndex = 5;
+            fullscreenButton.Text = "Full Screen";
+            fullscreenButton.UseVisualStyleBackColor = true;
             // 
-            // CloseButton
+            // closeButton
             // 
-            CloseButton.AutoSize = true;
-            CloseButton.Location = new Point(389, 3);
-            CloseButton.Name = "CloseButton";
-            CloseButton.Size = new Size(82, 25);
-            CloseButton.TabIndex = 1;
-            CloseButton.Text = "Close Image";
-            CloseButton.UseVisualStyleBackColor = true;
+            closeButton.AutoSize = true;
+            closeButton.Location = new Point(384, 3);
+            closeButton.Name = "closeButton";
+            closeButton.Size = new Size(82, 25);
+            closeButton.TabIndex = 1;
+            closeButton.Text = "Close Image";
+            closeButton.UseVisualStyleBackColor = true;
             // 
-            // closeApp
+            // propertiesButton
             // 
-            closeApp.AutoSize = true;
-            closeApp.Location = new Point(308, 3);
-            closeApp.Name = "closeApp";
-            closeApp.Size = new Size(75, 25);
-            closeApp.TabIndex = 4;
-            closeApp.Text = "Close App";
-            closeApp.UseVisualStyleBackColor = true;
+            propertiesButton.AutoSize = true;
+            propertiesButton.Location = new Point(303, 3);
+            propertiesButton.Name = "propertiesButton";
+            propertiesButton.Size = new Size(75, 25);
+            propertiesButton.TabIndex = 4;
+            propertiesButton.Text = "Properties";
+            propertiesButton.UseVisualStyleBackColor = true;
             // 
-            // nextImage
+            // nextButton
             // 
-            nextImage.AutoSize = true;
-            nextImage.Location = new Point(558, 3);
-            nextImage.Name = "nextImage";
-            nextImage.Size = new Size(75, 25);
-            nextImage.TabIndex = 3;
-            nextImage.Text = "Next";
-            nextImage.UseVisualStyleBackColor = true;
+            nextButton.AutoSize = true;
+            nextButton.Location = new Point(560, 3);
+            nextButton.Name = "nextButton";
+            nextButton.Size = new Size(75, 25);
+            nextButton.TabIndex = 3;
+            nextButton.Text = "Next";
+            nextButton.UseVisualStyleBackColor = true;
             // 
             // previousButton
             // 
             previousButton.AutoSize = true;
-            previousButton.Location = new Point(477, 3);
+            previousButton.Location = new Point(641, 3);
             previousButton.Name = "previousButton";
             previousButton.Size = new Size(75, 25);
             previousButton.TabIndex = 2;
@@ -157,11 +157,11 @@
 
         private PictureBox pictureBox1;
         private Button openButton;
-        private Button CloseButton;
+        private Button closeButton;
         private Button previousButton;
-        private Button nextImage;
-        private Button closeApp;
-        private Button fullButton;
+        private Button nextButton;
+        private Button propertiesButton;
+        private Button fullscreenButton;
         protected TableLayoutPanel tableLayoutPanel1;
     }
 }
