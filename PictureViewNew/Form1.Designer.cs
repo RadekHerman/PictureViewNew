@@ -66,10 +66,10 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
             tableLayoutPanel1.Controls.Add(fullscreenButton, 0, 0);
             tableLayoutPanel1.Controls.Add(closeButton, 4, 0);
-            tableLayoutPanel1.Controls.Add(nextButton, 2, 0);
             tableLayoutPanel1.Controls.Add(propertiesButton, 5, 0);
-            tableLayoutPanel1.Controls.Add(previousButton, 1, 0);
             tableLayoutPanel1.Controls.Add(openButton, 3, 0);
+            tableLayoutPanel1.Controls.Add(previousButton, 2, 0);
+            tableLayoutPanel1.Controls.Add(nextButton, 1, 0);
             tableLayoutPanel1.Cursor = Cursors.Hand;
             tableLayoutPanel1.Dock = DockStyle.Bottom;
             tableLayoutPanel1.Location = new Point(0, 327);
@@ -106,12 +106,13 @@
             // nextButton
             // 
             nextButton.AutoSize = true;
-            nextButton.Location = new Point(270, 13);
+            nextButton.Location = new Point(351, 13);
             nextButton.Name = "nextButton";
             nextButton.Size = new Size(75, 25);
             nextButton.TabIndex = 3;
             nextButton.Text = "Next";
             nextButton.UseVisualStyleBackColor = true;
+            nextButton.Click += nextButton_Click;
             // 
             // propertiesButton
             // 
@@ -126,7 +127,7 @@
             // previousButton
             // 
             previousButton.AutoSize = true;
-            previousButton.Location = new Point(351, 13);
+            previousButton.Location = new Point(270, 13);
             previousButton.Name = "previousButton";
             previousButton.Size = new Size(75, 25);
             previousButton.TabIndex = 2;
