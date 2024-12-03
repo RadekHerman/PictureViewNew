@@ -36,6 +36,7 @@
             propertiesButton = new Button();
             nextButton = new Button();
             previousButton = new Button();
+            openFileDialog1 = new OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
@@ -137,6 +138,12 @@
             previousButton.Text = "Previous";
             previousButton.UseVisualStyleBackColor = true;
             // 
+            // openFileDialog1
+            // 
+            openFileDialog1.FileName = "openFileDialog1";
+            openFileDialog1.Filter = "JPEG Files (*.jpg)|*.jpg|PNG Files (*.png)|*.png|BMP Files (*.bmp)|*.bmp|All files (*.*)|*.*";
+            openFileDialog1.Title = "Open an image file";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -163,5 +170,6 @@
         private Button propertiesButton;
         private Button fullscreenButton;
         protected TableLayoutPanel tableLayoutPanel1;
+        private OpenFileDialog openFileDialog1;
     }
 }
