@@ -1,12 +1,13 @@
 
 namespace PictureViewNew
 {
-    public partial class Form1 : Form
+    public partial class FormMain : Form
     {
-        private string[] imageFiles; // Array to store image file paths
-        private int currentImageIndex = -1; // Index of the currently displayed image
-        private bool isFullScreen = false; // Track if the app is in full-screen mode
-        public Form1()
+        private string[]? imageFiles;
+        private int currentImageIndex = -1; 
+        private bool isFullScreen = false;
+        
+        public FormMain()
         {
             InitializeComponent();
         }
@@ -47,7 +48,7 @@ namespace PictureViewNew
             try
             {
                 pictureBox1.Image = Image.FromFile(filePath);
-                this.Text = $"Picture Viewer - {Path.GetFileName(filePath)}"; // Update form title
+                this.Text = $"Picture Viewer - {Path.GetFileName(filePath)}";
             }
             catch (Exception ex)
             {
@@ -98,20 +99,15 @@ namespace PictureViewNew
             LoadImage(imageFiles[currentImageIndex]);
         }
 
-        private void fullscreenButton_Click(object sender, EventArgs e)
+        private void fullScreenButton_Click(object sender, EventArgs e)
         {
             if (isFullScreen)
             {
                 // Exit full-screen mode
                 this.FormBorderStyle = FormBorderStyle.Sizable;
                 this.WindowState = FormWindowState.Normal;
-                
-                // te poni¿sze 3 nie dzia³aj¹, chcia³bym przywróciæ rozmiar bo jest trochê za ma³o z jakiegoœ powodu
-                //this.Size = new System.Drawing.Size(536, 417);
-                // this.Width = 536; // nie dzia³a
-                // this.Height = 417; // nie dzia³a
                 isFullScreen = false;
-                fullscreenButton.Text = "Full Screen"; // Update button text
+                fullScreenButton.Text = "Full Screen"; 
             }
             else
             {
@@ -119,7 +115,7 @@ namespace PictureViewNew
                 this.FormBorderStyle = FormBorderStyle.None;
                 this.WindowState = FormWindowState.Maximized;
                 isFullScreen = true;
-                fullscreenButton.Text = "Exit Full Screen"; // Update button text
+                fullScreenButton.Text = "Exit Full Screen"; 
             }
         }
 
@@ -128,7 +124,7 @@ namespace PictureViewNew
             if (keyData == Keys.Escape && isFullScreen)
             {
                 // Exit full-screen mode
-                fullscreenButton.PerformClick();
+                fullScreenButton.PerformClick();
                 return true; // Indicate the key press was handled
             }
 

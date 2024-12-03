@@ -1,6 +1,6 @@
 ﻿namespace PictureViewNew
 {
-    partial class Form1
+    partial class FormMain
     {
         /// <summary>
         ///  Required designer variable.
@@ -30,7 +30,7 @@
         {
             pictureBox1 = new PictureBox();
             tableLayoutPanel1 = new TableLayoutPanel();
-            fullscreenButton = new Button();
+            fullScreenButton = new Button();
             closeButton = new Button();
             propertiesButton = new Button();
             openButton = new Button();
@@ -49,7 +49,7 @@
             pictureBox1.Dock = DockStyle.Fill;
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(520, 378);
+            pictureBox1.Size = new Size(542, 262);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -64,7 +64,7 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
-            tableLayoutPanel1.Controls.Add(fullscreenButton, 0, 0);
+            tableLayoutPanel1.Controls.Add(fullScreenButton, 0, 0);
             tableLayoutPanel1.Controls.Add(closeButton, 4, 0);
             tableLayoutPanel1.Controls.Add(propertiesButton, 5, 0);
             tableLayoutPanel1.Controls.Add(openButton, 3, 0);
@@ -72,31 +72,30 @@
             tableLayoutPanel1.Controls.Add(nextButton, 1, 0);
             tableLayoutPanel1.Cursor = Cursors.Hand;
             tableLayoutPanel1.Dock = DockStyle.Bottom;
-            tableLayoutPanel1.Location = new Point(0, 327);
+            tableLayoutPanel1.Location = new Point(0, 221);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.Padding = new Padding(10);
+            tableLayoutPanel1.Padding = new Padding(10, 5, 10, 5);
             tableLayoutPanel1.RightToLeft = RightToLeft.Yes;
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Size = new Size(520, 51);
+            tableLayoutPanel1.Size = new Size(542, 41);
             tableLayoutPanel1.TabIndex = 1;
             tableLayoutPanel1.Paint += tableLayoutPanel1_Paint;
             // 
-            // fullscreenButton
+            // fullScreenButton
             // 
-            fullscreenButton.AutoSize = true;
-            fullscreenButton.Location = new Point(432, 13);
-            fullscreenButton.Name = "fullscreenButton";
-            fullscreenButton.Size = new Size(75, 25);
-            fullscreenButton.TabIndex = 5;
-            fullscreenButton.Text = "Full Screen";
-            fullscreenButton.UseVisualStyleBackColor = true;
-            fullscreenButton.Click += fullscreenButton_Click;
+            fullScreenButton.Location = new Point(434, 8);
+            fullScreenButton.Name = "fullScreenButton";
+            fullScreenButton.Size = new Size(95, 25);
+            fullScreenButton.TabIndex = 5;
+            fullScreenButton.Text = "Full Screen";
+            fullScreenButton.UseVisualStyleBackColor = true;
+            fullScreenButton.Click += fullScreenButton_Click;
             // 
             // closeButton
             // 
             closeButton.AutoSize = true;
-            closeButton.Location = new Point(94, 13);
+            closeButton.Location = new Point(96, 8);
             closeButton.Name = "closeButton";
             closeButton.Size = new Size(82, 25);
             closeButton.TabIndex = 1;
@@ -107,7 +106,7 @@
             // propertiesButton
             // 
             propertiesButton.AutoSize = true;
-            propertiesButton.Location = new Point(13, 13);
+            propertiesButton.Location = new Point(15, 8);
             propertiesButton.Name = "propertiesButton";
             propertiesButton.Size = new Size(75, 25);
             propertiesButton.TabIndex = 4;
@@ -117,7 +116,7 @@
             // openButton
             // 
             openButton.AutoSize = true;
-            openButton.Location = new Point(182, 13);
+            openButton.Location = new Point(184, 8);
             openButton.Name = "openButton";
             openButton.Size = new Size(82, 25);
             openButton.TabIndex = 0;
@@ -128,7 +127,7 @@
             // previousButton
             // 
             previousButton.AutoSize = true;
-            previousButton.Location = new Point(270, 13);
+            previousButton.Location = new Point(272, 8);
             previousButton.Name = "previousButton";
             previousButton.Size = new Size(75, 25);
             previousButton.TabIndex = 2;
@@ -139,7 +138,7 @@
             // nextButton
             // 
             nextButton.AutoSize = true;
-            nextButton.Location = new Point(351, 13);
+            nextButton.Location = new Point(353, 8);
             nextButton.Name = "nextButton";
             nextButton.Size = new Size(75, 25);
             nextButton.TabIndex = 3;
@@ -149,22 +148,21 @@
             // 
             // openFileDialog1
             // 
-            openFileDialog1.FileName = "openFileDialog1";
             openFileDialog1.Filter = "JPEG Files (*.jpg)|*.jpg|PNG Files (*.png)|*.png|BMP Files (*.bmp)|*.bmp|All files (*.*)|*.*";
             openFileDialog1.Title = "Open an image file";
             // 
-            // Form1
+            // FormMain
             // 
             AllowDrop = true;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             AutoSize = true;
-            ClientSize = new Size(520, 378);
+            ClientSize = new Size(542, 262);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(pictureBox1);
-            MinimumSize = new Size(536, 50);
-            Name = "Form1";
+            MinimumSize = new Size(557, 50);
+            Name = "FormMain";
             Text = "Image Viewer";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -182,7 +180,7 @@
         private Button previousButton;
         private Button nextButton;
         private Button propertiesButton;
-        private Button fullscreenButton;
+        private Button fullScreenButton;
         protected TableLayoutPanel tableLayoutPanel1;
         private OpenFileDialog openFileDialog1;
     }
