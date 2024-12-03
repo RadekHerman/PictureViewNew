@@ -1,3 +1,4 @@
+
 namespace PictureViewNew
 {
     public partial class Form1 : Form
@@ -20,6 +21,8 @@ namespace PictureViewNew
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 pictureBox1.Load(openFileDialog1.FileName);
+
+                this.Text = $"Picture Viewer - {Path.GetFileName(openFileDialog1.FileName)}";
                 LoadImageFolder(Path.GetDirectoryName(openFileDialog1.FileName));
             }
         }
@@ -102,6 +105,11 @@ namespace PictureViewNew
                 // Exit full-screen mode
                 this.FormBorderStyle = FormBorderStyle.Sizable;
                 this.WindowState = FormWindowState.Normal;
+                
+                // te poni¿sze 3 nie dzia³aj¹, chcia³bym przywróciæ rozmiar bo jest trochê za ma³o z jakiegoœ powodu
+                //this.Size = new System.Drawing.Size(536, 417);
+                // this.Width = 536; // nie dzia³a
+                // this.Height = 417; // nie dzia³a
                 isFullScreen = false;
                 fullscreenButton.Text = "Full Screen"; // Update button text
             }
@@ -127,5 +135,9 @@ namespace PictureViewNew
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -166,6 +166,7 @@
             MinimumSize = new Size(536, 50);
             Name = "Form1";
             Text = "Image Viewer";
+            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
