@@ -91,6 +91,7 @@
             fullscreenButton.TabIndex = 5;
             fullscreenButton.Text = "Full Screen";
             fullscreenButton.UseVisualStyleBackColor = true;
+            fullscreenButton.Click += fullscreenButton_Click;
             // 
             // closeButton
             // 

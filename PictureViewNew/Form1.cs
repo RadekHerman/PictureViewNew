@@ -4,6 +4,7 @@ namespace PictureViewNew
     {
         private string[] imageFiles; // Array to store image file paths
         private int currentImageIndex = -1; // Index of the currently displayed image
+        private bool isFullScreen = false; // Track if the app is in full-screen mode
         public Form1()
         {
             InitializeComponent();
@@ -93,5 +94,38 @@ namespace PictureViewNew
             // Load the previous image
             LoadImage(imageFiles[currentImageIndex]);
         }
+
+        private void fullscreenButton_Click(object sender, EventArgs e)
+        {
+            if (isFullScreen)
+            {
+                // Exit full-screen mode
+                this.FormBorderStyle = FormBorderStyle.Sizable;
+                this.WindowState = FormWindowState.Normal;
+                isFullScreen = false;
+                fullscreenButton.Text = "Full Screen"; // Update button text
+            }
+            else
+            {
+                // Enter full-screen mode
+                this.FormBorderStyle = FormBorderStyle.None;
+                this.WindowState = FormWindowState.Maximized;
+                isFullScreen = true;
+                fullscreenButton.Text = "Exit Full Screen"; // Update button text
+            }
+        }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Escape && isFullScreen)
+            {
+                // Exit full-screen mode
+                fullscreenButton.PerformClick();
+                return true; // Indicate the key press was handled
+            }
+
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+
     }
 }
