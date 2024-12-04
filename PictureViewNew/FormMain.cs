@@ -4,9 +4,9 @@ namespace PictureViewNew
     public partial class FormMain : Form
     {
         private string[]? imageFiles;
-        private int currentImageIndex = -1; 
+        private int currentImageIndex = -1;
         private bool isFullScreen = false;
-        
+
         public FormMain()
         {
             InitializeComponent();
@@ -107,7 +107,7 @@ namespace PictureViewNew
                 this.FormBorderStyle = FormBorderStyle.Sizable;
                 this.WindowState = FormWindowState.Normal;
                 isFullScreen = false;
-                fullScreenButton.Text = "Full Screen"; 
+                fullScreenButton.Text = "Full Screen";
             }
             else
             {
@@ -115,7 +115,7 @@ namespace PictureViewNew
                 this.FormBorderStyle = FormBorderStyle.None;
                 this.WindowState = FormWindowState.Maximized;
                 isFullScreen = true;
-                fullScreenButton.Text = "Exit Full Screen"; 
+                fullScreenButton.Text = "Exit Full Screen";
             }
         }
 
@@ -134,6 +134,37 @@ namespace PictureViewNew
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void rotateButton_Click(object sender, EventArgs e)
+        {
+            if (pictureBox1.Image == null)
+            {
+                MessageBox.Show("No image loaded. Please load an image first.");
+                return;
+            }
+
+            Image image = pictureBox1.Image;
+            image.RotateFlip(RotateFlipType.Rotate90FlipNone);
+
+            pictureBox1.Image = image;
+
+            pictureBox1.Refresh();
+        }
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            if (pictureBox1.Image == null)
+            {
+                MessageBox.Show("No image to save. Please load an image first.");
+                return;
+            }
+
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox1.Image.Save(saveFileDialog1.FileName);
+                MessageBox.Show("Image saved successfully!");
+            }
         }
     }
 }
