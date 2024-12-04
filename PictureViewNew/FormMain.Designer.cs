@@ -68,13 +68,13 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 23F));
-            tableLayoutPanel1.Controls.Add(fullScreenButton, 0, 0);
-            tableLayoutPanel1.Controls.Add(closeButton, 4, 0);
-            tableLayoutPanel1.Controls.Add(rotateButton, 5, 0);
-            tableLayoutPanel1.Controls.Add(openButton, 3, 0);
-            tableLayoutPanel1.Controls.Add(previousButton, 2, 0);
-            tableLayoutPanel1.Controls.Add(nextButton, 1, 0);
-            tableLayoutPanel1.Controls.Add(saveButton, 6, 0);
+            tableLayoutPanel1.Controls.Add(openButton, 6, 0);
+            tableLayoutPanel1.Controls.Add(closeButton, 0, 0);
+            tableLayoutPanel1.Controls.Add(fullScreenButton, 3, 0);
+            tableLayoutPanel1.Controls.Add(previousButton, 5, 0);
+            tableLayoutPanel1.Controls.Add(nextButton, 4, 0);
+            tableLayoutPanel1.Controls.Add(saveButton, 1, 0);
+            tableLayoutPanel1.Controls.Add(rotateButton, 2, 0);
             tableLayoutPanel1.Cursor = Cursors.Hand;
             tableLayoutPanel1.Dock = DockStyle.Bottom;
             tableLayoutPanel1.Location = new Point(0, 433);
@@ -92,11 +92,11 @@
             // 
             fullScreenButton.AutoSize = true;
             fullScreenButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            fullScreenButton.Location = new Point(514, 11);
+            fullScreenButton.Location = new Point(273, 11);
             fullScreenButton.Margin = new Padding(3, 4, 3, 4);
             fullScreenButton.Name = "fullScreenButton";
             fullScreenButton.Size = new Size(90, 30);
-            fullScreenButton.TabIndex = 6;
+            fullScreenButton.TabIndex = 3;
             fullScreenButton.Text = "Full Screen";
             fullScreenButton.UseVisualStyleBackColor = true;
             fullScreenButton.Click += fullScreenButton_Click;
@@ -105,11 +105,11 @@
             // 
             closeButton.AutoSize = true;
             closeButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            closeButton.Location = new Point(146, 11);
+            closeButton.Location = new Point(503, 11);
             closeButton.Margin = new Padding(3, 4, 3, 4);
             closeButton.Name = "closeButton";
             closeButton.Size = new Size(101, 30);
-            closeButton.TabIndex = 2;
+            closeButton.TabIndex = 6;
             closeButton.Text = "Close Image";
             closeButton.UseVisualStyleBackColor = true;
             closeButton.Click += closeButton_Click;
@@ -117,11 +117,11 @@
             // rotateButton
             // 
             rotateButton.AutoSize = true;
-            rotateButton.Location = new Point(68, 11);
+            rotateButton.Location = new Point(369, 11);
             rotateButton.Margin = new Padding(3, 4, 3, 4);
             rotateButton.Name = "rotateButton";
             rotateButton.Size = new Size(72, 33);
-            rotateButton.TabIndex = 1;
+            rotateButton.TabIndex = 4;
             rotateButton.Text = "Rotate";
             rotateButton.UseVisualStyleBackColor = true;
             rotateButton.Click += rotateButton_Click;
@@ -130,11 +130,11 @@
             // 
             openButton.AutoSize = true;
             openButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            openButton.Location = new Point(253, 11);
+            openButton.Location = new Point(14, 11);
             openButton.Margin = new Padding(3, 4, 3, 4);
             openButton.Name = "openButton";
-            openButton.Size = new Size(101, 30);
-            openButton.TabIndex = 3;
+            openButton.Size = new Size(99, 30);
+            openButton.TabIndex = 0;
             openButton.Text = "Open Image";
             openButton.UseVisualStyleBackColor = true;
             openButton.Click += openButton_Click;
@@ -142,11 +142,11 @@
             // previousButton
             // 
             previousButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            previousButton.Location = new Point(360, 11);
+            previousButton.Location = new Point(119, 11);
             previousButton.Margin = new Padding(3, 4, 3, 4);
             previousButton.Name = "previousButton";
             previousButton.Size = new Size(71, 33);
-            previousButton.TabIndex = 4;
+            previousButton.TabIndex = 1;
             previousButton.Text = "Previous";
             previousButton.UseVisualStyleBackColor = true;
             previousButton.Click += previousButton_Click;
@@ -154,11 +154,11 @@
             // nextButton
             // 
             nextButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            nextButton.Location = new Point(437, 11);
+            nextButton.Location = new Point(196, 11);
             nextButton.Margin = new Padding(3, 4, 3, 4);
             nextButton.Name = "nextButton";
             nextButton.Size = new Size(71, 33);
-            nextButton.TabIndex = 5;
+            nextButton.TabIndex = 2;
             nextButton.Text = "Next";
             nextButton.UseVisualStyleBackColor = true;
             nextButton.Click += nextButton_Click;
@@ -166,11 +166,11 @@
             // saveButton
             // 
             saveButton.AutoSize = true;
-            saveButton.Location = new Point(14, 11);
+            saveButton.Location = new Point(447, 11);
             saveButton.Margin = new Padding(3, 4, 3, 4);
             saveButton.Name = "saveButton";
-            saveButton.Size = new Size(48, 33);
-            saveButton.TabIndex = 0;
+            saveButton.Size = new Size(50, 33);
+            saveButton.TabIndex = 5;
             saveButton.Text = "Save";
             saveButton.UseVisualStyleBackColor = true;
             saveButton.Click += saveButton_Click;

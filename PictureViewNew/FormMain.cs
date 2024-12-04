@@ -162,9 +162,9 @@ namespace PictureViewNew
 
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                pictureBox1.Image.Save(saveFileDialog1.FileName);
-                MessageBox.Show("Image saved successfully!");
+                    pictureBox1.Image.Save(saveFileDialog1.FileName);
+                    MessageBox.Show("Image saved successfully!");
             }
         }
-    }
+    } 
 }
