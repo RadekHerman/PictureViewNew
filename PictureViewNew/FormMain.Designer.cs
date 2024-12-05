@@ -37,7 +37,7 @@
             nextButton = new Button();
             saveAsButton = new Button();
             rotateButton = new Button();
-            button1 = new Button();
+            saveButton = new Button();
             openFileDialog1 = new OpenFileDialog();
             saveFileDialog1 = new SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -52,14 +52,14 @@
             pictureBox1.Dock = DockStyle.Fill;
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(625, 369);
+            pictureBox1.Size = new Size(604, 371);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
             // tableLayoutPanel1
             // 
-            tableLayoutPanel1.AutoSize = true;
+            tableLayoutPanel1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             tableLayoutPanel1.ColumnCount = 8;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
@@ -67,25 +67,25 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 122F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.Controls.Add(openButton, 6, 0);
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
             tableLayoutPanel1.Controls.Add(closeButton, 0, 0);
-            tableLayoutPanel1.Controls.Add(fullScreenButton, 3, 0);
-            tableLayoutPanel1.Controls.Add(previousButton, 5, 0);
-            tableLayoutPanel1.Controls.Add(nextButton, 4, 0);
-            tableLayoutPanel1.Controls.Add(saveAsButton, 1, 0);
-            tableLayoutPanel1.Controls.Add(rotateButton, 2, 0);
-            tableLayoutPanel1.Controls.Add(button1, 7, 0);
+            tableLayoutPanel1.Controls.Add(previousButton, 6, 0);
+            tableLayoutPanel1.Controls.Add(openButton, 7, 0);
+            tableLayoutPanel1.Controls.Add(nextButton, 5, 0);
+            tableLayoutPanel1.Controls.Add(rotateButton, 4, 0);
+            tableLayoutPanel1.Controls.Add(fullScreenButton, 1, 0);
+            tableLayoutPanel1.Controls.Add(saveButton, 3, 0);
+            tableLayoutPanel1.Controls.Add(saveAsButton, 2, 0);
             tableLayoutPanel1.Cursor = Cursors.Hand;
             tableLayoutPanel1.Dock = DockStyle.Bottom;
-            tableLayoutPanel1.Location = new Point(0, 328);
+            tableLayoutPanel1.Location = new Point(0, 330);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.Padding = new Padding(10, 5, 10, 5);
             tableLayoutPanel1.RightToLeft = RightToLeft.Yes;
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Size = new Size(625, 41);
+            tableLayoutPanel1.Size = new Size(604, 41);
             tableLayoutPanel1.TabIndex = 1;
             tableLayoutPanel1.Paint += tableLayoutPanel1_Paint;
             // 
@@ -93,7 +93,7 @@
             // 
             openButton.AutoSize = true;
             openButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            openButton.Location = new Point(96, 8);
+            openButton.Location = new Point(14, 8);
             openButton.Name = "openButton";
             openButton.Size = new Size(82, 25);
             openButton.TabIndex = 0;
@@ -105,7 +105,7 @@
             // 
             closeButton.AutoSize = true;
             closeButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            closeButton.Location = new Point(530, 8);
+            closeButton.Location = new Point(509, 8);
             closeButton.Name = "closeButton";
             closeButton.Size = new Size(82, 25);
             closeButton.TabIndex = 6;
@@ -115,11 +115,10 @@
             // 
             // fullScreenButton
             // 
-            fullScreenButton.AutoSize = true;
             fullScreenButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            fullScreenButton.Location = new Point(320, 8);
+            fullScreenButton.Location = new Point(429, 8);
             fullScreenButton.Name = "fullScreenButton";
-            fullScreenButton.Size = new Size(74, 25);
+            fullScreenButton.Size = new Size(74, 23);
             fullScreenButton.TabIndex = 3;
             fullScreenButton.Text = "Full Screen";
             fullScreenButton.UseVisualStyleBackColor = true;
@@ -127,8 +126,9 @@
             // 
             // previousButton
             // 
+            previousButton.AutoSize = true;
             previousButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            previousButton.Location = new Point(184, 8);
+            previousButton.Location = new Point(102, 8);
             previousButton.Name = "previousButton";
             previousButton.Size = new Size(62, 25);
             previousButton.TabIndex = 1;
@@ -139,9 +139,9 @@
             // nextButton
             // 
             nextButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            nextButton.Location = new Point(252, 8);
+            nextButton.Location = new Point(170, 8);
             nextButton.Name = "nextButton";
-            nextButton.Size = new Size(62, 25);
+            nextButton.Size = new Size(62, 23);
             nextButton.TabIndex = 2;
             nextButton.Text = "Next";
             nextButton.UseVisualStyleBackColor = true;
@@ -149,10 +149,9 @@
             // 
             // saveAsButton
             // 
-            saveAsButton.AutoSize = true;
-            saveAsButton.Location = new Point(469, 8);
+            saveAsButton.Location = new Point(368, 8);
             saveAsButton.Name = "saveAsButton";
-            saveAsButton.Size = new Size(55, 25);
+            saveAsButton.Size = new Size(55, 23);
             saveAsButton.TabIndex = 5;
             saveAsButton.Text = "Save as";
             saveAsButton.UseVisualStyleBackColor = true;
@@ -161,7 +160,7 @@
             // rotateButton
             // 
             rotateButton.AutoSize = true;
-            rotateButton.Location = new Point(400, 8);
+            rotateButton.Location = new Point(238, 8);
             rotateButton.Name = "rotateButton";
             rotateButton.Size = new Size(63, 25);
             rotateButton.TabIndex = 4;
@@ -169,14 +168,15 @@
             rotateButton.UseVisualStyleBackColor = true;
             rotateButton.Click += rotateButton_Click;
             // 
-            // button1
+            // saveButton
             // 
-            button1.Location = new Point(13, 8);
-            button1.Name = "button1";
-            button1.Size = new Size(43, 23);
-            button1.TabIndex = 7;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            saveButton.AutoSize = true;
+            saveButton.Location = new Point(307, 8);
+            saveButton.Name = "saveButton";
+            saveButton.Size = new Size(55, 25);
+            saveButton.TabIndex = 7;
+            saveButton.Text = "Save";
+            saveButton.UseVisualStyleBackColor = true;
             // 
             // openFileDialog1
             // 
@@ -196,10 +196,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             AutoSize = true;
-            ClientSize = new Size(625, 369);
+            ClientSize = new Size(604, 371);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(pictureBox1);
-            MinimumSize = new Size(557, 48);
+            MinimumSize = new Size(620, 50);
             Name = "FormMain";
             Text = "Image Viewer";
             Load += Form1_Load;
@@ -207,7 +207,6 @@
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -223,6 +222,6 @@
         private OpenFileDialog openFileDialog1;
         private Button saveAsButton;
         private SaveFileDialog saveFileDialog1;
-        private Button button1;
+        private Button saveButton;
     }
 }
