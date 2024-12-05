@@ -152,7 +152,7 @@ namespace PictureViewNew
             pictureBox1.Refresh();
         }
 
-        private void saveButton_Click(object sender, EventArgs e)
+        private void saveAsButton_Click(object sender, EventArgs e)
         {
             if (pictureBox1.Image == null)
             {
@@ -162,8 +162,16 @@ namespace PictureViewNew
 
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
+                // i get error when overriting the same image
+                try
+                {
                     pictureBox1.Image.Save(saveFileDialog1.FileName);
                     MessageBox.Show("Image saved successfully!");
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Please use a different file name.");
+                }
             }
         }
     } 
