@@ -1,4 +1,6 @@
 
+using System.Windows.Forms;
+
 namespace PictureViewNew
 {
     public partial class FormMain : Form
@@ -6,6 +8,7 @@ namespace PictureViewNew
         private string[]? imageFiles;
         private int currentImageIndex = -1;
         private bool isFullScreen = false;
+        private string currentImagePath = string.Empty;
 
         public FormMain()
         {
@@ -21,11 +24,22 @@ namespace PictureViewNew
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                pictureBox1.Load(openFileDialog1.FileName);
+                // pictureBox1.Load(openFileDialog1.FileName);
+
+                currentImagePath = openFileDialog1.FileName;
+
+                using (FileStream fs = new FileStream(currentImagePath, FileMode.Open))
+                {
+                    pictureBox1.Image = Image.FromStream(fs);
+                    fs.Close();
+                }
 
                 this.Text = $"Picture Viewer - {Path.GetFileName(openFileDialog1.FileName)}";
                 LoadImageFolder(Path.GetDirectoryName(openFileDialog1.FileName));
+                               
             }
+
+
         }
 
         private void nextButton_Click(object sender, EventArgs e)
@@ -42,12 +56,22 @@ namespace PictureViewNew
             // Load the next image
             LoadImage(imageFiles[currentImageIndex]);
         }
-
         private void LoadImage(string filePath)
         {
             try
             {
+                // Dispose of any previous image if it's already loaded
+                if (pictureBox1.Image != null)
+                {
+                    pictureBox1.Image.Dispose();
+                }
+
                 pictureBox1.Image = Image.FromFile(filePath);
+
+                // Set the current image path for saving
+                currentImagePath = filePath;
+
+                // Update the form's title to show the loaded image name
                 this.Text = $"Picture Viewer - {Path.GetFileName(filePath)}";
             }
             catch (Exception ex)
@@ -72,6 +96,7 @@ namespace PictureViewNew
 
                 // Set the current index to the selected image
                 currentImageIndex = Array.IndexOf(imageFiles, openFileDialog1.FileName);
+                //MessageBox.Show("CurrentImageIndex:" + currentImageIndex);
             }
             catch (Exception ex)
             {
@@ -131,7 +156,7 @@ namespace PictureViewNew
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void FormMain_Load(object sender, EventArgs e)
         {
 
         }
@@ -167,6 +192,7 @@ namespace PictureViewNew
                 {
                     pictureBox1.Image.Save(saveFileDialog1.FileName);
                     MessageBox.Show("Image saved successfully!");
+                    LoadImageFolder(Path.GetDirectoryName(openFileDialog1.FileName));
                 }
                 catch (Exception)
                 {
@@ -174,5 +200,39 @@ namespace PictureViewNew
                 }
             }
         }
-    } 
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            // https://code-maze.com/different-ways-to-overwrite-file-in-csharp/
+            // https://stackoverflow.com/questions/8905714/overwrite-existing-image
+   
+            if (pictureBox1.Image == null)
+            {
+                MessageBox.Show("No image to save. Please load an image first.");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(currentImagePath))
+            {
+                MessageBox.Show("No valid file path available to save the image.");
+                return;
+            }
+
+            try
+            {
+                // Save the image to the original file path
+                using (FileStream fs = new FileStream(currentImagePath, FileMode.Create, FileAccess.Write))
+                {
+                    pictureBox1.Image.Save(fs, System.Drawing.Imaging.ImageFormat.Jpeg);
+                }
+
+                MessageBox.Show($"Image saved successfully to: {currentImagePath}");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Image was not changed.");
+            }
+
+        }
+    }
 }

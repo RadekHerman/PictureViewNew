@@ -30,14 +30,14 @@
         {
             pictureBox1 = new PictureBox();
             tableLayoutPanel1 = new TableLayoutPanel();
-            openButton = new Button();
             closeButton = new Button();
-            fullScreenButton = new Button();
             previousButton = new Button();
+            openButton = new Button();
             nextButton = new Button();
-            saveAsButton = new Button();
             rotateButton = new Button();
+            fullScreenButton = new Button();
             saveButton = new Button();
+            saveAsButton = new Button();
             openFileDialog1 = new OpenFileDialog();
             saveFileDialog1 = new SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -89,18 +89,6 @@
             tableLayoutPanel1.TabIndex = 1;
             tableLayoutPanel1.Paint += tableLayoutPanel1_Paint;
             // 
-            // openButton
-            // 
-            openButton.AutoSize = true;
-            openButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            openButton.Location = new Point(14, 8);
-            openButton.Name = "openButton";
-            openButton.Size = new Size(82, 25);
-            openButton.TabIndex = 0;
-            openButton.Text = "Open Image";
-            openButton.UseVisualStyleBackColor = true;
-            openButton.Click += openButton_Click;
-            // 
             // closeButton
             // 
             closeButton.AutoSize = true;
@@ -108,21 +96,10 @@
             closeButton.Location = new Point(509, 8);
             closeButton.Name = "closeButton";
             closeButton.Size = new Size(82, 25);
-            closeButton.TabIndex = 6;
+            closeButton.TabIndex = 7;
             closeButton.Text = "Close Image";
             closeButton.UseVisualStyleBackColor = true;
             closeButton.Click += closeButton_Click;
-            // 
-            // fullScreenButton
-            // 
-            fullScreenButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            fullScreenButton.Location = new Point(429, 8);
-            fullScreenButton.Name = "fullScreenButton";
-            fullScreenButton.Size = new Size(74, 23);
-            fullScreenButton.TabIndex = 3;
-            fullScreenButton.Text = "Full Screen";
-            fullScreenButton.UseVisualStyleBackColor = true;
-            fullScreenButton.Click += fullScreenButton_Click;
             // 
             // previousButton
             // 
@@ -136,6 +113,18 @@
             previousButton.UseVisualStyleBackColor = true;
             previousButton.Click += previousButton_Click;
             // 
+            // openButton
+            // 
+            openButton.AutoSize = true;
+            openButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            openButton.Location = new Point(14, 8);
+            openButton.Name = "openButton";
+            openButton.Size = new Size(82, 25);
+            openButton.TabIndex = 0;
+            openButton.Text = "Open Image";
+            openButton.UseVisualStyleBackColor = true;
+            openButton.Click += openButton_Click;
+            // 
             // nextButton
             // 
             nextButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
@@ -147,6 +136,39 @@
             nextButton.UseVisualStyleBackColor = true;
             nextButton.Click += nextButton_Click;
             // 
+            // rotateButton
+            // 
+            rotateButton.AutoSize = true;
+            rotateButton.Location = new Point(238, 8);
+            rotateButton.Name = "rotateButton";
+            rotateButton.Size = new Size(63, 25);
+            rotateButton.TabIndex = 3;
+            rotateButton.Text = "Rotate";
+            rotateButton.UseVisualStyleBackColor = true;
+            rotateButton.Click += rotateButton_Click;
+            // 
+            // fullScreenButton
+            // 
+            fullScreenButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            fullScreenButton.Location = new Point(429, 8);
+            fullScreenButton.Name = "fullScreenButton";
+            fullScreenButton.Size = new Size(74, 23);
+            fullScreenButton.TabIndex = 6;
+            fullScreenButton.Text = "Full Screen";
+            fullScreenButton.UseVisualStyleBackColor = true;
+            fullScreenButton.Click += fullScreenButton_Click;
+            // 
+            // saveButton
+            // 
+            saveButton.AutoSize = true;
+            saveButton.Location = new Point(307, 8);
+            saveButton.Name = "saveButton";
+            saveButton.Size = new Size(55, 25);
+            saveButton.TabIndex = 4;
+            saveButton.Text = "Save";
+            saveButton.UseVisualStyleBackColor = true;
+            saveButton.Click += saveButton_Click;
+            // 
             // saveAsButton
             // 
             saveAsButton.Location = new Point(368, 8);
@@ -156,27 +178,6 @@
             saveAsButton.Text = "Save as";
             saveAsButton.UseVisualStyleBackColor = true;
             saveAsButton.Click += saveAsButton_Click;
-            // 
-            // rotateButton
-            // 
-            rotateButton.AutoSize = true;
-            rotateButton.Location = new Point(238, 8);
-            rotateButton.Name = "rotateButton";
-            rotateButton.Size = new Size(63, 25);
-            rotateButton.TabIndex = 4;
-            rotateButton.Text = "Rotate";
-            rotateButton.UseVisualStyleBackColor = true;
-            rotateButton.Click += rotateButton_Click;
-            // 
-            // saveButton
-            // 
-            saveButton.AutoSize = true;
-            saveButton.Location = new Point(307, 8);
-            saveButton.Name = "saveButton";
-            saveButton.Size = new Size(55, 25);
-            saveButton.TabIndex = 7;
-            saveButton.Text = "Save";
-            saveButton.UseVisualStyleBackColor = true;
             // 
             // openFileDialog1
             // 
@@ -202,7 +203,7 @@
             MinimumSize = new Size(620, 50);
             Name = "FormMain";
             Text = "Image Viewer";
-            Load += Form1_Load;
+            Load += FormMain_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
