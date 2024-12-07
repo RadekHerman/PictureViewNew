@@ -149,10 +149,11 @@
             // 
             // fullScreenButton
             // 
+            fullScreenButton.AutoSize = true;
             fullScreenButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             fullScreenButton.Location = new Point(429, 8);
             fullScreenButton.Name = "fullScreenButton";
-            fullScreenButton.Size = new Size(74, 23);
+            fullScreenButton.Size = new Size(74, 25);
             fullScreenButton.TabIndex = 6;
             fullScreenButton.Text = "Full Screen";
             fullScreenButton.UseVisualStyleBackColor = true;
