@@ -31,15 +31,15 @@ namespace PictureViewNew
                 using (FileStream fs = new FileStream(currentImagePath, FileMode.Open))
                 {
                     pictureBox1.Image = Image.FromStream(fs);
-                    fs.Close();
                 }
+                
+                //allows overriding the image in case of save
+                Image image = new Bitmap(pictureBox1.Image);
+                pictureBox1.Image = image;
 
                 this.Text = $"Picture Viewer - {Path.GetFileName(openFileDialog1.FileName)}";
-                LoadImageFolder(Path.GetDirectoryName(openFileDialog1.FileName));
-                               
+                LoadImageFolder(Path.GetDirectoryName(openFileDialog1.FileName));                  
             }
-
-
         }
 
         private void nextButton_Click(object sender, EventArgs e)
@@ -67,11 +67,7 @@ namespace PictureViewNew
                 }
 
                 pictureBox1.Image = Image.FromFile(filePath);
-
-                // Set the current image path for saving
                 currentImagePath = filePath;
-
-                // Update the form's title to show the loaded image name
                 this.Text = $"Picture Viewer - {Path.GetFileName(filePath)}";
             }
             catch (Exception ex)
@@ -173,7 +169,6 @@ namespace PictureViewNew
             image.RotateFlip(RotateFlipType.Rotate90FlipNone);
 
             pictureBox1.Image = image;
-
             pictureBox1.Refresh();
         }
 
@@ -187,31 +182,27 @@ namespace PictureViewNew
 
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                // i get error when overriting the same image
                 try
                 {
                     pictureBox1.Image.Save(saveFileDialog1.FileName);
                     MessageBox.Show("Image saved successfully!");
                     LoadImageFolder(Path.GetDirectoryName(openFileDialog1.FileName));
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Please use a different file name.");
+                    MessageBox.Show("Please use a different file name." + ex);
                 }
             }
         }
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            // https://code-maze.com/different-ways-to-overwrite-file-in-csharp/
-            // https://stackoverflow.com/questions/8905714/overwrite-existing-image
-   
             if (pictureBox1.Image == null)
             {
                 MessageBox.Show("No image to save. Please load an image first.");
                 return;
             }
-
+            
             if (string.IsNullOrEmpty(currentImagePath))
             {
                 MessageBox.Show("No valid file path available to save the image.");
@@ -230,9 +221,8 @@ namespace PictureViewNew
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Image was not changed.");
+                MessageBox.Show($"Image was not changed." + ex);
             }
-
         }
     }
 }
