@@ -33,9 +33,9 @@ namespace PictureViewNew
                     pictureBox1.Image = Image.FromStream(fs);
                 }
                 
-                //allows overriding the image in case of save
-                Image image = new Bitmap(pictureBox1.Image);
-                pictureBox1.Image = image;
+                ////allows overriding the image in case of save
+                //Image image = new Bitmap(pictureBox1.Image);
+                //pictureBox1.Image = image;
 
                 this.Text = $"Picture Viewer - {Path.GetFileName(openFileDialog1.FileName)}";
                 LoadImageFolder(Path.GetDirectoryName(openFileDialog1.FileName));                  
@@ -184,13 +184,18 @@ namespace PictureViewNew
             {
                 try
                 {
-                    pictureBox1.Image.Save(saveFileDialog1.FileName);
+                    using (Bitmap tempBitmap = new Bitmap(pictureBox1.Image))
+                    {
+                        tempBitmap.Save(saveFileDialog1.FileName); // , System.Drawing.Imaging.ImageFormat.Png);
+                        //pictureBox1.Image.Save(saveFileDialog1.FileName);
+                    }
+                    //pictureBox1.Image.Save(saveFileDialog1.FileName);
                     MessageBox.Show("Image saved successfully!");
                     LoadImageFolder(Path.GetDirectoryName(openFileDialog1.FileName));
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Please use a different file name." + ex);
+                    MessageBox.Show("Error saving the image: " + ex);
                 }
             }
         }
@@ -211,17 +216,25 @@ namespace PictureViewNew
 
             try
             {
-                // Save the image to the original file path
-                using (FileStream fs = new FileStream(currentImagePath, FileMode.Create, FileAccess.Write))
+                using (Bitmap tempBitmap = new Bitmap(pictureBox1.Image))
                 {
-                    pictureBox1.Image.Save(fs, System.Drawing.Imaging.ImageFormat.Jpeg);
+                    using (FileStream fs = new FileStream(currentImagePath, FileMode.Create, FileAccess.Write))
+                    {
+                        tempBitmap.Save(fs, System.Drawing.Imaging.ImageFormat.Jpeg);
+                    }
                 }
+
+                // Save the image to the original file path
+                //using (FileStream fs = new FileStream(currentImagePath, FileMode.Create, FileAccess.Write))
+                //{
+                //    pictureBox1.Image.Save(fs, System.Drawing.Imaging.ImageFormat.Jpeg);
+                //}
 
                 MessageBox.Show($"Image saved successfully to: {currentImagePath}");
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Image was not changed." + ex);
+                MessageBox.Show($"Error saving the image: " + ex);
             }
         }
     }
