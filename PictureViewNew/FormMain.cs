@@ -24,8 +24,6 @@ namespace PictureViewNew
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                // pictureBox1.Load(openFileDialog1.FileName);
-
                 currentImagePath = openFileDialog1.FileName;
 
                 using (FileStream fs = new FileStream(currentImagePath, FileMode.Open))
@@ -33,10 +31,6 @@ namespace PictureViewNew
                     pictureBox1.Image = Image.FromStream(fs);
                 }
                 
-                ////allows overriding the image in case of save
-                //Image image = new Bitmap(pictureBox1.Image);
-                //pictureBox1.Image = image;
-
                 this.Text = $"Picture Viewer - {Path.GetFileName(openFileDialog1.FileName)}";
                 LoadImageFolder(Path.GetDirectoryName(openFileDialog1.FileName));                  
             }
@@ -75,8 +69,6 @@ namespace PictureViewNew
                 MessageBox.Show($"Error loading image: {ex.Message}");
             }
         }
-
-
         private void LoadImageFolder(string folderPath)
         {
             try
@@ -139,7 +131,6 @@ namespace PictureViewNew
                 fullScreenButton.Text = "Exit Full Screen";
             }
         }
-
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
             if (keyData == Keys.Escape && isFullScreen)
@@ -186,10 +177,8 @@ namespace PictureViewNew
                 {
                     using (Bitmap tempBitmap = new Bitmap(pictureBox1.Image))
                     {
-                        tempBitmap.Save(saveFileDialog1.FileName); // , System.Drawing.Imaging.ImageFormat.Png);
-                        //pictureBox1.Image.Save(saveFileDialog1.FileName);
+                        tempBitmap.Save(saveFileDialog1.FileName, System.Drawing.Imaging.ImageFormat.Jpeg);
                     }
-                    //pictureBox1.Image.Save(saveFileDialog1.FileName);
                     MessageBox.Show("Image saved successfully!");
                     LoadImageFolder(Path.GetDirectoryName(openFileDialog1.FileName));
                 }
@@ -218,19 +207,12 @@ namespace PictureViewNew
             {
                 using (Bitmap tempBitmap = new Bitmap(pictureBox1.Image))
                 {
-                    using (FileStream fs = new FileStream(currentImagePath, FileMode.Create, FileAccess.Write))
-                    {
-                        tempBitmap.Save(fs, System.Drawing.Imaging.ImageFormat.Jpeg);
-                    }
+                    using FileStream fs = new FileStream(currentImagePath, FileMode.Create, FileAccess.Write);
+                    tempBitmap.Save(fs, System.Drawing.Imaging.ImageFormat.Jpeg);
                 }
 
-                // Save the image to the original file path
-                //using (FileStream fs = new FileStream(currentImagePath, FileMode.Create, FileAccess.Write))
-                //{
-                //    pictureBox1.Image.Save(fs, System.Drawing.Imaging.ImageFormat.Jpeg);
-                //}
-
                 MessageBox.Show($"Image saved successfully to: {currentImagePath}");
+                LoadImageFolder(Path.GetDirectoryName(openFileDialog1.FileName));
             }
             catch (Exception ex)
             {
