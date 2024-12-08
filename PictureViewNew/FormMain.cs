@@ -1,6 +1,3 @@
-
-using System.Windows.Forms;
-
 namespace PictureViewNew
 {
     public partial class FormMain : Form
@@ -30,9 +27,10 @@ namespace PictureViewNew
                 {
                     pictureBox1.Image = Image.FromStream(fs);
                 }
-                
+
                 this.Text = $"Picture Viewer - {Path.GetFileName(openFileDialog1.FileName)}";
-                LoadImageFolder(Path.GetDirectoryName(openFileDialog1.FileName));                  
+                string directory = Path.GetDirectoryName(openFileDialog1.FileName) ?? Environment.CurrentDirectory;
+                LoadImageFolder(directory);
             }
         }
 
@@ -84,7 +82,6 @@ namespace PictureViewNew
 
                 // Set the current index to the selected image
                 currentImageIndex = Array.IndexOf(imageFiles, openFileDialog1.FileName);
-                //MessageBox.Show("CurrentImageIndex:" + currentImageIndex);
             }
             catch (Exception ex)
             {
@@ -180,7 +177,8 @@ namespace PictureViewNew
                         tempBitmap.Save(saveFileDialog1.FileName, System.Drawing.Imaging.ImageFormat.Jpeg);
                     }
                     MessageBox.Show("Image saved successfully!");
-                    LoadImageFolder(Path.GetDirectoryName(openFileDialog1.FileName));
+                    string directory = Path.GetDirectoryName(openFileDialog1.FileName) ?? Environment.CurrentDirectory;
+                    LoadImageFolder(directory);
                 }
                 catch (Exception ex)
                 {
@@ -196,7 +194,7 @@ namespace PictureViewNew
                 MessageBox.Show("No image to save. Please load an image first.");
                 return;
             }
-            
+
             if (string.IsNullOrEmpty(currentImagePath))
             {
                 MessageBox.Show("No valid file path available to save the image.");
@@ -212,7 +210,6 @@ namespace PictureViewNew
                 }
 
                 MessageBox.Show($"Image saved successfully to: {currentImagePath}");
-                LoadImageFolder(Path.GetDirectoryName(openFileDialog1.FileName));
             }
             catch (Exception ex)
             {
