@@ -57,6 +57,7 @@
             backgroundColorMenuItem = new ToolStripMenuItem();
             resizeSettingsMenuItem = new ToolStripMenuItem();
             aboutMenuItem = new ToolStripMenuItem();
+            colorDialog1 = new ColorDialog();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tableLayoutPanel1.SuspendLayout();
             menuStrip1.SuspendLayout();
@@ -282,35 +283,35 @@
             // fullScreenMenuItem
             // 
             fullScreenMenuItem.Name = "fullScreenMenuItem";
-            fullScreenMenuItem.Size = new Size(193, 26);
+            fullScreenMenuItem.Size = new Size(224, 26);
             fullScreenMenuItem.Text = "&Full Screen";
             fullScreenMenuItem.Click += fullScreenMenuItem_Click;
             // 
             // rotateMenuItem
             // 
             rotateMenuItem.Name = "rotateMenuItem";
-            rotateMenuItem.Size = new Size(193, 26);
+            rotateMenuItem.Size = new Size(224, 26);
             rotateMenuItem.Text = "&Rotate 90 deg";
             rotateMenuItem.Click += rotateMenuItem_Click;
             // 
             // nextImageMenuItem
             // 
             nextImageMenuItem.Name = "nextImageMenuItem";
-            nextImageMenuItem.Size = new Size(193, 26);
+            nextImageMenuItem.Size = new Size(224, 26);
             nextImageMenuItem.Text = "&Next Image";
             nextImageMenuItem.Click += nextImageMenuItem_Click;
             // 
             // previousImageMenuItem
             // 
             previousImageMenuItem.Name = "previousImageMenuItem";
-            previousImageMenuItem.Size = new Size(193, 26);
+            previousImageMenuItem.Size = new Size(224, 26);
             previousImageMenuItem.Text = "Previo&us Image";
             previousImageMenuItem.Click += previousImageMenuItem_Click;
             // 
             // resizeMenuItem
             // 
             resizeMenuItem.Name = "resizeMenuItem";
-            resizeMenuItem.Size = new Size(193, 26);
+            resizeMenuItem.Size = new Size(224, 26);
             resizeMenuItem.Text = "Resi&ze";
             // 
             // propertiesToolStripMenuItem
@@ -323,13 +324,14 @@
             // backgroundColorMenuItem
             // 
             backgroundColorMenuItem.Name = "backgroundColorMenuItem";
-            backgroundColorMenuItem.Size = new Size(211, 26);
+            backgroundColorMenuItem.Size = new Size(224, 26);
             backgroundColorMenuItem.Text = "&Background Color";
+            backgroundColorMenuItem.Click += backgroundColorMenuItem_Click;
             // 
             // resizeSettingsMenuItem
             // 
             resizeSettingsMenuItem.Name = "resizeSettingsMenuItem";
-            resizeSettingsMenuItem.Size = new Size(211, 26);
+            resizeSettingsMenuItem.Size = new Size(224, 26);
             resizeSettingsMenuItem.Text = "Resize Se&ttings";
             // 
             // aboutMenuItem
@@ -395,5 +397,6 @@
         private ToolStripMenuItem previousImageMenuItem;
         private ToolStripMenuItem saveMenuItem;
         private ToolStripMenuItem saveAsMenuItem;
+        private ColorDialog colorDialog1;
     }
 }

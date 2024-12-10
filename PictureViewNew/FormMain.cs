@@ -263,5 +263,12 @@ namespace PictureViewNew
         {
             saveAsButton_Click(sender, e);
         }
+
+        private void backgroundColorMenuItem_Click(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+                pictureBox1.BackColor = colorDialog1.Color;
+        }
+    
     }
 }
