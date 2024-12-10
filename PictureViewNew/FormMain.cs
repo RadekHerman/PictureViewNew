@@ -269,6 +269,16 @@ namespace PictureViewNew
             if (colorDialog1.ShowDialog() == DialogResult.OK)
                 pictureBox1.BackColor = colorDialog1.Color;
         }
-    
+
+        private void aboutMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(
+                text: "View your pictures, rotate, save and resize if needed." +
+                      "\nCopyright (c) 2024 Rados³aw Herman",
+                caption: "About ImageViewApp",
+                buttons: MessageBoxButtons.OK,
+                icon: MessageBoxIcon.Information
+                );
+        }
     }
 }

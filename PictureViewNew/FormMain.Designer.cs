@@ -241,35 +241,35 @@
             // openMenuItem
             // 
             openMenuItem.Name = "openMenuItem";
-            openMenuItem.Size = new Size(224, 26);
+            openMenuItem.Size = new Size(174, 26);
             openMenuItem.Text = "&Open Image";
             openMenuItem.Click += openMenuItem_Click;
             // 
             // saveMenuItem
             // 
             saveMenuItem.Name = "saveMenuItem";
-            saveMenuItem.Size = new Size(224, 26);
+            saveMenuItem.Size = new Size(174, 26);
             saveMenuItem.Text = "&Save";
             saveMenuItem.Click += saveMenuItem_Click;
             // 
             // saveAsMenuItem
             // 
             saveAsMenuItem.Name = "saveAsMenuItem";
-            saveAsMenuItem.Size = new Size(224, 26);
+            saveAsMenuItem.Size = new Size(174, 26);
             saveAsMenuItem.Text = "Sa&ve As";
             saveAsMenuItem.Click += saveAsMenuItem_Click;
             // 
             // closeMenuItem
             // 
             closeMenuItem.Name = "closeMenuItem";
-            closeMenuItem.Size = new Size(224, 26);
+            closeMenuItem.Size = new Size(174, 26);
             closeMenuItem.Text = "&Close Image";
             closeMenuItem.Click += closeMenuItem_Click;
             // 
             // exitMenuItem
             // 
             exitMenuItem.Name = "exitMenuItem";
-            exitMenuItem.Size = new Size(224, 26);
+            exitMenuItem.Size = new Size(174, 26);
             exitMenuItem.Text = "&Exit App";
             exitMenuItem.Click += exitMenuItem_Click;
             // 
@@ -339,6 +339,7 @@
             aboutMenuItem.Name = "aboutMenuItem";
             aboutMenuItem.Size = new Size(64, 24);
             aboutMenuItem.Text = "&About";
+            aboutMenuItem.Click += aboutMenuItem_Click;
             // 
             // FormMain
             // 
