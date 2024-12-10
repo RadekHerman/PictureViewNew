@@ -216,5 +216,52 @@ namespace PictureViewNew
                 MessageBox.Show($"Error saving the image: " + ex);
             }
         }
+
+
+        // strip menu methods
+        private void openMenuItem_Click(object sender, EventArgs e)
+        {
+            openButton_Click(sender, e);
+        }
+
+        private void closeMenuItem_Click(object sender, EventArgs e)
+        {
+            closeButton_Click(sender, e);
+        }
+
+        private void exitMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void fullScreenMenuItem_Click(object sender, EventArgs e)
+        {
+            fullScreenButton_Click(sender, e);
+        }
+
+        private void rotateMenuItem_Click(object sender, EventArgs e)
+        {
+            rotateButton_Click(sender, e);
+        }
+
+        private void nextImageMenuItem_Click(object sender, EventArgs e)
+        {
+            nextButton_Click(sender, e);
+        }
+
+        private void previousImageMenuItem_Click(object sender, EventArgs e)
+        {
+            previousButton_Click(sender, e);
+        }
+
+        private void saveMenuItem_Click(object sender, EventArgs e)
+        {
+            saveButton_Click(sender, e);
+        }
+
+        private void saveAsMenuItem_Click(object sender, EventArgs e)
+        {
+            saveAsButton_Click(sender, e);
+        }
     }
 }

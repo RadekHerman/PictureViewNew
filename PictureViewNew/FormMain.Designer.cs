@@ -42,19 +42,21 @@
             saveFileDialog1 = new SaveFileDialog();
             menuStrip1 = new MenuStrip();
             imageToolStripMenuItem = new ToolStripMenuItem();
-            openToolStripMenuItem = new ToolStripMenuItem();
-            closeToolStripMenuItem = new ToolStripMenuItem();
-            exitToolStripMenuItem = new ToolStripMenuItem();
+            openMenuItem = new ToolStripMenuItem();
+            saveMenuItem = new ToolStripMenuItem();
+            saveAsMenuItem = new ToolStripMenuItem();
+            closeMenuItem = new ToolStripMenuItem();
+            exitMenuItem = new ToolStripMenuItem();
             viewToolStripMenuItem = new ToolStripMenuItem();
-            fullScreenToolStripMenuItem = new ToolStripMenuItem();
-            rotateToolStripMenuItem = new ToolStripMenuItem();
-            resizeToolStripMenuItem = new ToolStripMenuItem();
+            fullScreenMenuItem = new ToolStripMenuItem();
+            rotateMenuItem = new ToolStripMenuItem();
+            nextImageMenuItem = new ToolStripMenuItem();
+            previousImageMenuItem = new ToolStripMenuItem();
+            resizeMenuItem = new ToolStripMenuItem();
             propertiesToolStripMenuItem = new ToolStripMenuItem();
-            backgroundColorToolStripMenuItem = new ToolStripMenuItem();
-            resizeSettingsToolStripMenuItem = new ToolStripMenuItem();
-            aboutToolStripMenuItem = new ToolStripMenuItem();
-            nextImageToolStripMenuItem = new ToolStripMenuItem();
-            previousImageToolStripMenuItem = new ToolStripMenuItem();
+            backgroundColorMenuItem = new ToolStripMenuItem();
+            resizeSettingsMenuItem = new ToolStripMenuItem();
+            aboutMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tableLayoutPanel1.SuspendLayout();
             menuStrip1.SuspendLayout();
@@ -221,7 +223,7 @@
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { imageToolStripMenuItem, viewToolStripMenuItem, propertiesToolStripMenuItem, aboutToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { imageToolStripMenuItem, viewToolStripMenuItem, propertiesToolStripMenuItem, aboutMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(709, 28);
@@ -230,90 +232,111 @@
             // 
             // imageToolStripMenuItem
             // 
-            imageToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { openToolStripMenuItem, closeToolStripMenuItem, exitToolStripMenuItem });
+            imageToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { openMenuItem, saveMenuItem, saveAsMenuItem, closeMenuItem, exitMenuItem });
             imageToolStripMenuItem.Name = "imageToolStripMenuItem";
             imageToolStripMenuItem.Size = new Size(65, 24);
             imageToolStripMenuItem.Text = "&Image";
             // 
-            // openToolStripMenuItem
+            // openMenuItem
             // 
-            openToolStripMenuItem.Name = "openToolStripMenuItem";
-            openToolStripMenuItem.Size = new Size(224, 26);
-            openToolStripMenuItem.Text = "&Open Image";
+            openMenuItem.Name = "openMenuItem";
+            openMenuItem.Size = new Size(224, 26);
+            openMenuItem.Text = "&Open Image";
+            openMenuItem.Click += openMenuItem_Click;
             // 
-            // closeToolStripMenuItem
+            // saveMenuItem
             // 
-            closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            closeToolStripMenuItem.Size = new Size(224, 26);
-            closeToolStripMenuItem.Text = "&Close Image";
+            saveMenuItem.Name = "saveMenuItem";
+            saveMenuItem.Size = new Size(224, 26);
+            saveMenuItem.Text = "&Save";
+            saveMenuItem.Click += saveMenuItem_Click;
             // 
-            // exitToolStripMenuItem
+            // saveAsMenuItem
             // 
-            exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(224, 26);
-            exitToolStripMenuItem.Text = "&Exit App";
+            saveAsMenuItem.Name = "saveAsMenuItem";
+            saveAsMenuItem.Size = new Size(224, 26);
+            saveAsMenuItem.Text = "Sa&ve As";
+            saveAsMenuItem.Click += saveAsMenuItem_Click;
+            // 
+            // closeMenuItem
+            // 
+            closeMenuItem.Name = "closeMenuItem";
+            closeMenuItem.Size = new Size(224, 26);
+            closeMenuItem.Text = "&Close Image";
+            closeMenuItem.Click += closeMenuItem_Click;
+            // 
+            // exitMenuItem
+            // 
+            exitMenuItem.Name = "exitMenuItem";
+            exitMenuItem.Size = new Size(224, 26);
+            exitMenuItem.Text = "&Exit App";
+            exitMenuItem.Click += exitMenuItem_Click;
             // 
             // viewToolStripMenuItem
             // 
-            viewToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { fullScreenToolStripMenuItem, rotateToolStripMenuItem, resizeToolStripMenuItem, nextImageToolStripMenuItem, previousImageToolStripMenuItem });
+            viewToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { fullScreenMenuItem, rotateMenuItem, nextImageMenuItem, previousImageMenuItem, resizeMenuItem });
             viewToolStripMenuItem.Name = "viewToolStripMenuItem";
             viewToolStripMenuItem.Size = new Size(55, 24);
             viewToolStripMenuItem.Text = "&View";
             // 
-            // fullScreenToolStripMenuItem
+            // fullScreenMenuItem
             // 
-            fullScreenToolStripMenuItem.Name = "fullScreenToolStripMenuItem";
-            fullScreenToolStripMenuItem.Size = new Size(224, 26);
-            fullScreenToolStripMenuItem.Text = "&Full Screen";
+            fullScreenMenuItem.Name = "fullScreenMenuItem";
+            fullScreenMenuItem.Size = new Size(193, 26);
+            fullScreenMenuItem.Text = "&Full Screen";
+            fullScreenMenuItem.Click += fullScreenMenuItem_Click;
             // 
-            // rotateToolStripMenuItem
+            // rotateMenuItem
             // 
-            rotateToolStripMenuItem.Name = "rotateToolStripMenuItem";
-            rotateToolStripMenuItem.Size = new Size(224, 26);
-            rotateToolStripMenuItem.Text = "&Rotate";
+            rotateMenuItem.Name = "rotateMenuItem";
+            rotateMenuItem.Size = new Size(193, 26);
+            rotateMenuItem.Text = "&Rotate 90 deg";
+            rotateMenuItem.Click += rotateMenuItem_Click;
             // 
-            // resizeToolStripMenuItem
+            // nextImageMenuItem
             // 
-            resizeToolStripMenuItem.Name = "resizeToolStripMenuItem";
-            resizeToolStripMenuItem.Size = new Size(224, 26);
-            resizeToolStripMenuItem.Text = "Re&size";
+            nextImageMenuItem.Name = "nextImageMenuItem";
+            nextImageMenuItem.Size = new Size(193, 26);
+            nextImageMenuItem.Text = "&Next Image";
+            nextImageMenuItem.Click += nextImageMenuItem_Click;
+            // 
+            // previousImageMenuItem
+            // 
+            previousImageMenuItem.Name = "previousImageMenuItem";
+            previousImageMenuItem.Size = new Size(193, 26);
+            previousImageMenuItem.Text = "Previo&us Image";
+            previousImageMenuItem.Click += previousImageMenuItem_Click;
+            // 
+            // resizeMenuItem
+            // 
+            resizeMenuItem.Name = "resizeMenuItem";
+            resizeMenuItem.Size = new Size(193, 26);
+            resizeMenuItem.Text = "Resi&ze";
             // 
             // propertiesToolStripMenuItem
             // 
-            propertiesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { backgroundColorToolStripMenuItem, resizeSettingsToolStripMenuItem });
+            propertiesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { backgroundColorMenuItem, resizeSettingsMenuItem });
             propertiesToolStripMenuItem.Name = "propertiesToolStripMenuItem";
             propertiesToolStripMenuItem.Size = new Size(90, 24);
             propertiesToolStripMenuItem.Text = "&Properties";
             // 
-            // backgroundColorToolStripMenuItem
+            // backgroundColorMenuItem
             // 
-            backgroundColorToolStripMenuItem.Name = "backgroundColorToolStripMenuItem";
-            backgroundColorToolStripMenuItem.Size = new Size(224, 26);
-            backgroundColorToolStripMenuItem.Text = "&Background Color";
+            backgroundColorMenuItem.Name = "backgroundColorMenuItem";
+            backgroundColorMenuItem.Size = new Size(211, 26);
+            backgroundColorMenuItem.Text = "&Background Color";
             // 
-            // resizeSettingsToolStripMenuItem
+            // resizeSettingsMenuItem
             // 
-            resizeSettingsToolStripMenuItem.Name = "resizeSettingsToolStripMenuItem";
-            resizeSettingsToolStripMenuItem.Size = new Size(224, 26);
-            resizeSettingsToolStripMenuItem.Text = "Resize Se&ttings";
+            resizeSettingsMenuItem.Name = "resizeSettingsMenuItem";
+            resizeSettingsMenuItem.Size = new Size(211, 26);
+            resizeSettingsMenuItem.Text = "Resize Se&ttings";
             // 
-            // aboutToolStripMenuItem
+            // aboutMenuItem
             // 
-            aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            aboutToolStripMenuItem.Size = new Size(64, 24);
-            aboutToolStripMenuItem.Text = "&About";
-            // 
-            // nextImageToolStripMenuItem
-            // 
-            nextImageToolStripMenuItem.Name = "nextImageToolStripMenuItem";
-            nextImageToolStripMenuItem.Size = new Size(224, 26);
-            nextImageToolStripMenuItem.Text = "&Next Image";
-            // 
-            // previousImageToolStripMenuItem
-            // 
-            previousImageToolStripMenuItem.Name = "previousImageToolStripMenuItem";
-            previousImageToolStripMenuItem.Size = new Size(224, 26);
-            previousImageToolStripMenuItem.Text = "Pre&vious Image";
+            aboutMenuItem.Name = "aboutMenuItem";
+            aboutMenuItem.Size = new Size(64, 24);
+            aboutMenuItem.Text = "&About";
             // 
             // FormMain
             // 
@@ -357,18 +380,20 @@
         private Button saveButton;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem imageToolStripMenuItem;
-        private ToolStripMenuItem openToolStripMenuItem;
-        private ToolStripMenuItem closeToolStripMenuItem;
-        private ToolStripMenuItem exitToolStripMenuItem;
+        private ToolStripMenuItem openMenuItem;
+        private ToolStripMenuItem closeMenuItem;
+        private ToolStripMenuItem exitMenuItem;
         private ToolStripMenuItem viewToolStripMenuItem;
-        private ToolStripMenuItem fullScreenToolStripMenuItem;
-        private ToolStripMenuItem rotateToolStripMenuItem;
-        private ToolStripMenuItem resizeToolStripMenuItem;
+        private ToolStripMenuItem fullScreenMenuItem;
+        private ToolStripMenuItem rotateMenuItem;
+        private ToolStripMenuItem resizeMenuItem;
         private ToolStripMenuItem propertiesToolStripMenuItem;
-        private ToolStripMenuItem backgroundColorToolStripMenuItem;
-        private ToolStripMenuItem resizeSettingsToolStripMenuItem;
-        private ToolStripMenuItem aboutToolStripMenuItem;
-        private ToolStripMenuItem nextImageToolStripMenuItem;
-        private ToolStripMenuItem previousImageToolStripMenuItem;
+        private ToolStripMenuItem backgroundColorMenuItem;
+        private ToolStripMenuItem resizeSettingsMenuItem;
+        private ToolStripMenuItem aboutMenuItem;
+        private ToolStripMenuItem nextImageMenuItem;
+        private ToolStripMenuItem previousImageMenuItem;
+        private ToolStripMenuItem saveMenuItem;
+        private ToolStripMenuItem saveAsMenuItem;
     }
 }
