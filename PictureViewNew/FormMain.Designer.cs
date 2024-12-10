@@ -58,6 +58,7 @@
             resizeSettingsMenuItem = new ToolStripMenuItem();
             aboutMenuItem = new ToolStripMenuItem();
             colorDialog1 = new ColorDialog();
+            resizeButton = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tableLayoutPanel1.SuspendLayout();
             menuStrip1.SuspendLayout();
@@ -72,7 +73,7 @@
             pictureBox1.Location = new Point(0, 28);
             pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(709, 470);
+            pictureBox1.Size = new Size(778, 489);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -80,7 +81,8 @@
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            tableLayoutPanel1.ColumnCount = 8;
+            tableLayoutPanel1.ColumnCount = 9;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
@@ -90,23 +92,24 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
             tableLayoutPanel1.Controls.Add(closeButton, 0, 0);
-            tableLayoutPanel1.Controls.Add(previousButton, 6, 0);
-            tableLayoutPanel1.Controls.Add(openButton, 7, 0);
-            tableLayoutPanel1.Controls.Add(nextButton, 5, 0);
-            tableLayoutPanel1.Controls.Add(rotateButton, 4, 0);
             tableLayoutPanel1.Controls.Add(fullScreenButton, 1, 0);
-            tableLayoutPanel1.Controls.Add(saveButton, 3, 0);
             tableLayoutPanel1.Controls.Add(saveAsButton, 2, 0);
+            tableLayoutPanel1.Controls.Add(saveButton, 3, 0);
+            tableLayoutPanel1.Controls.Add(resizeButton, 4, 0);
+            tableLayoutPanel1.Controls.Add(rotateButton, 5, 0);
+            tableLayoutPanel1.Controls.Add(previousButton, 7, 0);
+            tableLayoutPanel1.Controls.Add(openButton, 8, 0);
+            tableLayoutPanel1.Controls.Add(nextButton, 6, 0);
             tableLayoutPanel1.Cursor = Cursors.Hand;
             tableLayoutPanel1.Dock = DockStyle.Bottom;
-            tableLayoutPanel1.Location = new Point(0, 443);
+            tableLayoutPanel1.Location = new Point(0, 462);
             tableLayoutPanel1.Margin = new Padding(3, 4, 3, 4);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.Padding = new Padding(11, 7, 11, 7);
             tableLayoutPanel1.RightToLeft = RightToLeft.Yes;
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Size = new Size(709, 55);
+            tableLayoutPanel1.Size = new Size(778, 55);
             tableLayoutPanel1.TabIndex = 1;
             tableLayoutPanel1.Paint += tableLayoutPanel1_Paint;
             // 
@@ -114,7 +117,7 @@
             // 
             closeButton.AutoSize = true;
             closeButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            closeButton.Location = new Point(594, 11);
+            closeButton.Location = new Point(663, 11);
             closeButton.Margin = new Padding(3, 4, 3, 4);
             closeButton.Name = "closeButton";
             closeButton.Size = new Size(101, 30);
@@ -127,7 +130,7 @@
             // 
             previousButton.AutoSize = true;
             previousButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            previousButton.Location = new Point(120, 11);
+            previousButton.Location = new Point(122, 11);
             previousButton.Margin = new Padding(3, 4, 3, 4);
             previousButton.Name = "previousButton";
             previousButton.Size = new Size(74, 30);
@@ -140,7 +143,7 @@
             // 
             openButton.AutoSize = true;
             openButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            openButton.Location = new Point(13, 11);
+            openButton.Location = new Point(15, 11);
             openButton.Margin = new Padding(3, 4, 3, 4);
             openButton.Name = "openButton";
             openButton.Size = new Size(101, 30);
@@ -152,7 +155,7 @@
             // nextButton
             // 
             nextButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            nextButton.Location = new Point(200, 11);
+            nextButton.Location = new Point(202, 11);
             nextButton.Margin = new Padding(3, 4, 3, 4);
             nextButton.Name = "nextButton";
             nextButton.Size = new Size(71, 31);
@@ -164,7 +167,7 @@
             // rotateButton
             // 
             rotateButton.AutoSize = true;
-            rotateButton.Location = new Point(277, 11);
+            rotateButton.Location = new Point(279, 11);
             rotateButton.Margin = new Padding(3, 4, 3, 4);
             rotateButton.Name = "rotateButton";
             rotateButton.Size = new Size(72, 33);
@@ -177,7 +180,7 @@
             // 
             fullScreenButton.AutoSize = true;
             fullScreenButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            fullScreenButton.Location = new Point(498, 11);
+            fullScreenButton.Location = new Point(567, 11);
             fullScreenButton.Margin = new Padding(3, 4, 3, 4);
             fullScreenButton.Name = "fullScreenButton";
             fullScreenButton.Size = new Size(90, 30);
@@ -189,7 +192,7 @@
             // saveButton
             // 
             saveButton.AutoSize = true;
-            saveButton.Location = new Point(355, 11);
+            saveButton.Location = new Point(424, 11);
             saveButton.Margin = new Padding(3, 4, 3, 4);
             saveButton.Name = "saveButton";
             saveButton.Size = new Size(63, 33);
@@ -201,7 +204,7 @@
             // saveAsButton
             // 
             saveAsButton.AutoSize = true;
-            saveAsButton.Location = new Point(424, 11);
+            saveAsButton.Location = new Point(493, 11);
             saveAsButton.Margin = new Padding(3, 4, 3, 4);
             saveAsButton.Name = "saveAsButton";
             saveAsButton.Size = new Size(68, 31);
@@ -227,7 +230,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { imageToolStripMenuItem, viewToolStripMenuItem, propertiesToolStripMenuItem, aboutMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(709, 28);
+            menuStrip1.Size = new Size(778, 28);
             menuStrip1.TabIndex = 2;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -283,35 +286,35 @@
             // fullScreenMenuItem
             // 
             fullScreenMenuItem.Name = "fullScreenMenuItem";
-            fullScreenMenuItem.Size = new Size(224, 26);
+            fullScreenMenuItem.Size = new Size(193, 26);
             fullScreenMenuItem.Text = "&Full Screen";
             fullScreenMenuItem.Click += fullScreenMenuItem_Click;
             // 
             // rotateMenuItem
             // 
             rotateMenuItem.Name = "rotateMenuItem";
-            rotateMenuItem.Size = new Size(224, 26);
+            rotateMenuItem.Size = new Size(193, 26);
             rotateMenuItem.Text = "&Rotate 90 deg";
             rotateMenuItem.Click += rotateMenuItem_Click;
             // 
             // nextImageMenuItem
             // 
             nextImageMenuItem.Name = "nextImageMenuItem";
-            nextImageMenuItem.Size = new Size(224, 26);
+            nextImageMenuItem.Size = new Size(193, 26);
             nextImageMenuItem.Text = "&Next Image";
             nextImageMenuItem.Click += nextImageMenuItem_Click;
             // 
             // previousImageMenuItem
             // 
             previousImageMenuItem.Name = "previousImageMenuItem";
-            previousImageMenuItem.Size = new Size(224, 26);
+            previousImageMenuItem.Size = new Size(193, 26);
             previousImageMenuItem.Text = "Previo&us Image";
             previousImageMenuItem.Click += previousImageMenuItem_Click;
             // 
             // resizeMenuItem
             // 
             resizeMenuItem.Name = "resizeMenuItem";
-            resizeMenuItem.Size = new Size(224, 26);
+            resizeMenuItem.Size = new Size(193, 26);
             resizeMenuItem.Text = "Resi&ze";
             // 
             // propertiesToolStripMenuItem
@@ -324,14 +327,14 @@
             // backgroundColorMenuItem
             // 
             backgroundColorMenuItem.Name = "backgroundColorMenuItem";
-            backgroundColorMenuItem.Size = new Size(224, 26);
+            backgroundColorMenuItem.Size = new Size(211, 26);
             backgroundColorMenuItem.Text = "&Background Color";
             backgroundColorMenuItem.Click += backgroundColorMenuItem_Click;
             // 
             // resizeSettingsMenuItem
             // 
             resizeSettingsMenuItem.Name = "resizeSettingsMenuItem";
-            resizeSettingsMenuItem.Size = new Size(224, 26);
+            resizeSettingsMenuItem.Size = new Size(211, 26);
             resizeSettingsMenuItem.Text = "Resize Se&ttings";
             // 
             // aboutMenuItem
@@ -341,6 +344,18 @@
             aboutMenuItem.Text = "&About";
             aboutMenuItem.Click += aboutMenuItem_Click;
             // 
+            // resizeButton
+            // 
+            resizeButton.AutoSize = true;
+            resizeButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            resizeButton.Location = new Point(357, 10);
+            resizeButton.Name = "resizeButton";
+            resizeButton.Size = new Size(61, 30);
+            resizeButton.TabIndex = 8;
+            resizeButton.Text = "Resize";
+            resizeButton.UseVisualStyleBackColor = true;
+            resizeButton.Click += resizeButton_Click;
+            // 
             // FormMain
             // 
             AllowDrop = true;
@@ -348,7 +363,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             AutoSize = true;
-            ClientSize = new Size(709, 498);
+            ClientSize = new Size(778, 517);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(pictureBox1);
             Controls.Add(menuStrip1);
@@ -399,5 +414,6 @@
         private ToolStripMenuItem saveMenuItem;
         private ToolStripMenuItem saveAsMenuItem;
         private ColorDialog colorDialog1;
+        private Button resizeButton;
     }
 }

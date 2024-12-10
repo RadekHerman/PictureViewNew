@@ -217,6 +217,48 @@ namespace PictureViewNew
             }
         }
 
+        private void resizeButton_Click(object sender, EventArgs e)
+        {
+            int maxSize = 1000; // will be set in menu properties --> resize_settings
+
+            if (pictureBox1.Image == null)
+            {
+                MessageBox.Show("Please open a picture first.");
+                return;
+            }
+
+            using (Bitmap tempBitmap = new Bitmap(pictureBox1.Image))
+            {
+                Bitmap processedImage = ResizeImage(tempBitmap, maxSize);
+                pictureBox1.Image = processedImage;
+            }
+
+            MessageBox.Show($"The image has been resized to {maxSize}");
+        }
+
+        private Bitmap ResizeImage(Bitmap image, int targetSize)
+        {
+            float scale = Math.Min((float)targetSize / image.Width, (float)targetSize / image.Height);
+            int newWidth = (int)(image.Width * scale);
+            int newHeight = (int)(image.Height * scale);
+
+            Bitmap resizedImage = new Bitmap(newWidth, newHeight);
+
+            using (Graphics graphics = Graphics.FromImage(resizedImage))
+            {
+                graphics.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+                graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+                graphics.PixelOffsetMode = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+                graphics.CompositingQuality = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
+
+                graphics.DrawImage(image, 0, 0, newWidth, newHeight);
+            }
+
+            return resizedImage;
+        }
+
+
+
 
         // strip menu methods
         private void openMenuItem_Click(object sender, EventArgs e)
@@ -280,5 +322,7 @@ namespace PictureViewNew
                 icon: MessageBoxIcon.Information
                 );
         }
+
+
     }
 }
