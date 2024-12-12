@@ -6,10 +6,12 @@ namespace PictureViewNew
         private int currentImageIndex = -1;
         private bool isFullScreen = false;
         private string currentImagePath = string.Empty;
+        private int maxSize = 1000;
 
         public FormMain()
         {
             InitializeComponent();
+            
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -219,7 +221,9 @@ namespace PictureViewNew
 
         private void resizeButton_Click(object sender, EventArgs e)
         {
-            int maxSize = 1000; // will be set in menu properties --> resize_settings
+            // int maxSize = 1000; // will be set in menu properties --> resize_settings
+            
+
 
             if (pictureBox1.Image == null)
             {
@@ -325,8 +329,11 @@ namespace PictureViewNew
 
         private void resizeSettingsMenuItem_Click(object sender, EventArgs e)
         {
-            FormInputResize form = new();
-            form.Show();
+            FormInputResize form2 = new();
+            form2.ShowDialog();
+            
+            int maxSize = int.Parse(form2.InputValue);
+            MessageBox.Show($"maxSize {maxSize}");
         }
     }
 }

@@ -29,22 +29,24 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormInputResize));
-            textBox1 = new TextBox();
+            messageTextBox = new TextBox();
             label1 = new Label();
+            inputValueTextBox = new TextBox();
             SuspendLayout();
             // 
-            // textBox1
+            // messageTextBox
             // 
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Arial Narrow", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 238);
-            textBox1.Location = new Point(12, 12);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.ReadOnly = true;
-            textBox1.Size = new Size(386, 135);
-            textBox1.TabIndex = 0;
-            textBox1.TabStop = false;
-            textBox1.Text = resources.GetString("textBox1.Text");
+            messageTextBox.BorderStyle = BorderStyle.None;
+            messageTextBox.Enabled = false;
+            messageTextBox.Font = new Font("Arial Narrow", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            messageTextBox.Location = new Point(12, 12);
+            messageTextBox.Multiline = true;
+            messageTextBox.Name = "messageTextBox";
+            messageTextBox.ReadOnly = true;
+            messageTextBox.Size = new Size(375, 135);
+            messageTextBox.TabIndex = 0;
+            messageTextBox.TabStop = false;
+            messageTextBox.Text = resources.GetString("messageTextBox.Text");
             // 
             // label1
             // 
@@ -55,24 +57,37 @@
             label1.TabIndex = 1;
             label1.Text = "label1";
             // 
+            // inputValueTextBox
+            // 
+            inputValueTextBox.Font = new Font("Arial Narrow", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            inputValueTextBox.Location = new Point(123, 151);
+            inputValueTextBox.MaxLength = 5;
+            inputValueTextBox.Name = "inputValueTextBox";
+            inputValueTextBox.Size = new Size(133, 29);
+            inputValueTextBox.TabIndex = 2;
+            inputValueTextBox.TextAlign = HorizontalAlignment.Center;
+            // 
             // FormInputResize
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(394, 189);
+            ClientSize = new Size(404, 189);
+            Controls.Add(inputValueTextBox);
             Controls.Add(label1);
-            Controls.Add(textBox1);
-            MaximumSize = new Size(410, 228);
-            MinimumSize = new Size(410, 228);
+            Controls.Add(messageTextBox);
+            MaximumSize = new Size(420, 228);
+            MinimumSize = new Size(420, 228);
             Name = "FormInputResize";
             Text = "Max Resize Value";
+            Load += FormInputResize_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private TextBox textBox1;
+        private TextBox messageTextBox;
         private Label label1;
+        private TextBox inputValueTextBox;
     }
 }
