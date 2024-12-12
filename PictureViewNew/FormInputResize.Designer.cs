@@ -30,10 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormInputResize));
             textBox1 = new TextBox();
+            label1 = new Label();
             SuspendLayout();
             // 
             // textBox1
             // 
+            textBox1.BorderStyle = BorderStyle.None;
             textBox1.Font = new Font("Arial Narrow", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 238);
             textBox1.Location = new Point(12, 12);
             textBox1.Multiline = true;
@@ -41,14 +43,27 @@
             textBox1.ReadOnly = true;
             textBox1.Size = new Size(386, 135);
             textBox1.TabIndex = 0;
+            textBox1.TabStop = false;
             textBox1.Text = resources.GetString("textBox1.Text");
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(314, 225);
+            label1.Name = "label1";
+            label1.Size = new Size(38, 15);
+            label1.TabIndex = 1;
+            label1.Text = "label1";
             // 
             // FormInputResize
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(410, 243);
+            ClientSize = new Size(394, 189);
+            Controls.Add(label1);
             Controls.Add(textBox1);
+            MaximumSize = new Size(410, 228);
+            MinimumSize = new Size(410, 228);
             Name = "FormInputResize";
             Text = "Max Resize Value";
             ResumeLayout(false);
@@ -58,5 +73,6 @@
         #endregion
 
         private TextBox textBox1;
+        private Label label1;
     }
 }

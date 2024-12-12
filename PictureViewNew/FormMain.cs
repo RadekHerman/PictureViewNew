@@ -323,6 +323,10 @@ namespace PictureViewNew
                 );
         }
 
-
+        private void resizeSettingsMenuItem_Click(object sender, EventArgs e)
+        {
+            FormInputResize form = new();
+            form.Show();
+        }
     }
 }
