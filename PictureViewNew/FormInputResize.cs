@@ -1,34 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-
-namespace PictureViewNew
+﻿namespace PictureViewNew
 {
     public partial class FormInputResize : Form
     {
+
         public string InputValue
         {
             get { return inputValueTextBox.Text; }
         }
 
-        public FormInputResize()
+        public FormInputResize(int currentValue)
         {
             InitializeComponent();
-            //InputValueTextBox_Load();
             inputValueTextBox.KeyPress += inputValueTextBox_KeyPress;
-
+            inputValueTextBox.Text = currentValue.ToString();
         }
 
         private void FormInputResize_Load(object sender, EventArgs e)
         {
-            inputValueTextBox.Text = "1000"; // Default value
             inputValueTextBox.Focus();
 
         }
@@ -44,6 +32,11 @@ namespace PictureViewNew
             }
         }
 
-
+        private void okButton_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK; // Indicate success
+            inputValueTextBox.Text = inputValueTextBox.Text;
+            this.Close();
+        }
     }
 }

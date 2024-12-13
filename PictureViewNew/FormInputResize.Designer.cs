@@ -32,13 +32,14 @@
             messageTextBox = new TextBox();
             label1 = new Label();
             inputValueTextBox = new TextBox();
+            okButton = new Button();
             SuspendLayout();
             // 
             // messageTextBox
             // 
             messageTextBox.BorderStyle = BorderStyle.None;
             messageTextBox.Enabled = false;
-            messageTextBox.Font = new Font("Arial Narrow", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            messageTextBox.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 238);
             messageTextBox.Location = new Point(12, 12);
             messageTextBox.Multiline = true;
             messageTextBox.Name = "messageTextBox";
@@ -67,11 +68,23 @@
             inputValueTextBox.TabIndex = 2;
             inputValueTextBox.TextAlign = HorizontalAlignment.Center;
             // 
+            // okButton
+            // 
+            okButton.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            okButton.Location = new Point(262, 151);
+            okButton.Name = "okButton";
+            okButton.Size = new Size(66, 29);
+            okButton.TabIndex = 3;
+            okButton.Text = "OK!";
+            okButton.UseVisualStyleBackColor = true;
+            okButton.Click += okButton_Click;
+            // 
             // FormInputResize
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(404, 189);
+            Controls.Add(okButton);
             Controls.Add(inputValueTextBox);
             Controls.Add(label1);
             Controls.Add(messageTextBox);
@@ -89,5 +102,6 @@
         private TextBox messageTextBox;
         private Label label1;
         private TextBox inputValueTextBox;
+        private Button okButton;
     }
 }
