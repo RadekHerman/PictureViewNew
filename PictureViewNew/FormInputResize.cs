@@ -18,8 +18,9 @@
         public FormInputResize()
         {
             InitializeComponent();
-            inputValueTextBox.KeyPress += inputValueTextBox_KeyPress;
             inputValueTextBox.Text = resizeValue.ToString();
+            inputValueTextBox.KeyPress += inputValueTextBox_KeyPress;
+            inputValueTextBox.KeyDown += inputValueTextBox_KeyDown;    
         }
 
         private void FormInputResize_Load(object sender, EventArgs e)
@@ -35,6 +36,16 @@
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true; // Reject the input
+            }
+        }
+
+        // Handle the KeyDown event (for detecting Enter key)
+        private void inputValueTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) // Check if Enter key was pressed
+            {
+                e.SuppressKeyPress = true;  // Prevent the ding sound when Enter is pressed
+                okButton_Click(sender, e);
             }
         }
 
