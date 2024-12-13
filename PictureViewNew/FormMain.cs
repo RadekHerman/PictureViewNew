@@ -6,7 +6,7 @@ namespace PictureViewNew
         private int currentImageIndex = -1;
         private bool isFullScreen = false;
         private string currentImagePath = string.Empty;
-        private int maxSize = 1000;
+        //private int maxSize = 1000;
 
 
         public FormMain()
@@ -223,7 +223,7 @@ namespace PictureViewNew
 
         private void resizeButton_Click(object sender, EventArgs e)
         {
-            // int maxSize = 1000; // will be set in menu properties --> resize_settings
+            int maxSize = FormInputResize.resizeValue;
 
             if (pictureBox1.Image == null)
             {
@@ -233,11 +233,17 @@ namespace PictureViewNew
 
             using (Bitmap tempBitmap = new Bitmap(pictureBox1.Image))
             {
-                Bitmap processedImage = ResizeImage(tempBitmap, maxSize);
-                pictureBox1.Image = processedImage;
+                try
+                {
+                    Bitmap processedImage = ResizeImage(tempBitmap, maxSize);
+                    pictureBox1.Image = processedImage;
+                    MessageBox.Show($"The image has been resized to {maxSize}");
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show($"Please give different resize value.");
+                }   
             }
-
-            MessageBox.Show($"The image has been resized to {maxSize}");
         }
 
         private Bitmap ResizeImage(Bitmap image, int targetSize)
@@ -260,9 +266,6 @@ namespace PictureViewNew
 
             return resizedImage;
         }
-
-
-
 
         // strip menu methods
         private void openMenuItem_Click(object sender, EventArgs e)
@@ -329,18 +332,11 @@ namespace PictureViewNew
 
         private void resizeSettingsMenuItem_Click(object sender, EventArgs e)
         {
-            using (FormInputResize form2 = new FormInputResize(maxSize))
+            FormInputResize form2 = new FormInputResize();
+            if (form2.ShowDialog() == DialogResult.OK)
             {
-                // Check if the form was closed
-                if (form2.ShowDialog() == DialogResult.OK || form2.ShowDialog() == DialogResult.None)
-                {
-                    string inputValue = form2.InputValue;
-
-                    maxSize = int.Parse(form2.InputValue);
-
-                }
+                //MessageBox.Show($"Resize set to: {FormInputResize.resizeValue}");
             }
-
         }
     }
 }

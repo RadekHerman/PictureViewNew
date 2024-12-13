@@ -2,23 +2,18 @@
 {
     public partial class FormInputResize : Form
     {
+        public static int resizeValue { get; set; } = 1000;
 
-        public string InputValue
-        {
-            get { return inputValueTextBox.Text; }
-        }
-
-        public FormInputResize(int currentValue)
+        public FormInputResize()
         {
             InitializeComponent();
             inputValueTextBox.KeyPress += inputValueTextBox_KeyPress;
-            inputValueTextBox.Text = currentValue.ToString();
+            inputValueTextBox.Text = resizeValue.ToString();            
         }
 
         private void FormInputResize_Load(object sender, EventArgs e)
         {
             inputValueTextBox.Focus();
-
         }
 
 
@@ -34,9 +29,23 @@
 
         private void okButton_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK; // Indicate success
-            inputValueTextBox.Text = inputValueTextBox.Text;
-            this.Close();
+            if (int.TryParse(inputValueTextBox.Text, out int submittedValue))
+            {
+                if (submittedValue > 1)
+                {
+                    resizeValue = submittedValue;
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Value should be more than 1");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Invalid input!");
+            }
         }
     }
 }
