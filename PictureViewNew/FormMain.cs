@@ -217,13 +217,15 @@ namespace PictureViewNew
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error saving the image: " + ex);
+                MessageBox.Show($"Error saving the image: {ex}");
             }
         }
 
         private void resizeButton_Click(object sender, EventArgs e)
         {
             int maxSize = FormInputResize.resizeValue;
+            //int maxSize = FormInputResize.LoadUserValue();
+
 
             if (pictureBox1.Image == null)
             {
@@ -241,7 +243,7 @@ namespace PictureViewNew
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show($"Please give different resize value.");
+                    MessageBox.Show($"Please give a different resize value.");
                 }   
             }
         }
@@ -322,7 +324,7 @@ namespace PictureViewNew
         private void aboutMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show(
-                text: "View your pictures, rotate, save and resize if needed." +
+                text: "View your pictures, rotate, resize and save if needed." +
                       "\nCopyright (c) 2024 Rados³aw Herman",
                 caption: "About ImageViewApp",
                 buttons: MessageBoxButtons.OK,

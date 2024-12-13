@@ -2,13 +2,24 @@
 {
     public partial class FormInputResize : Form
     {
-        public static int resizeValue { get; set; } = 1000;
+        public static int resizeValue
+        {
+            get
+            {
+                return Properties.Settings.Default.UserResizeValue;
+            }
+            set
+            {
+                Properties.Settings.Default.UserResizeValue = value;
+                Properties.Settings.Default.Save();
+            }
+        }
 
         public FormInputResize()
         {
             InitializeComponent();
             inputValueTextBox.KeyPress += inputValueTextBox_KeyPress;
-            inputValueTextBox.Text = resizeValue.ToString();            
+            inputValueTextBox.Text = resizeValue.ToString();
         }
 
         private void FormInputResize_Load(object sender, EventArgs e)
