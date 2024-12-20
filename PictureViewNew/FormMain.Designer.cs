@@ -70,9 +70,10 @@
             pictureBox1.BorderStyle = BorderStyle.Fixed3D;
             pictureBox1.Cursor = Cursors.Hand;
             pictureBox1.Dock = DockStyle.Fill;
-            pictureBox1.Location = new Point(0, 24);
+            pictureBox1.Location = new Point(0, 30);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(681, 364);
+            pictureBox1.Size = new Size(778, 487);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -101,13 +102,14 @@
             tableLayoutPanel1.Controls.Add(nextButton, 6, 0);
             tableLayoutPanel1.Cursor = Cursors.Hand;
             tableLayoutPanel1.Dock = DockStyle.Bottom;
-            tableLayoutPanel1.Location = new Point(0, 347);
+            tableLayoutPanel1.Location = new Point(0, 462);
+            tableLayoutPanel1.Margin = new Padding(3, 4, 3, 4);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.Padding = new Padding(10, 5, 10, 5);
+            tableLayoutPanel1.Padding = new Padding(11, 7, 11, 7);
             tableLayoutPanel1.RightToLeft = RightToLeft.Yes;
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Size = new Size(681, 41);
+            tableLayoutPanel1.Size = new Size(778, 55);
             tableLayoutPanel1.TabIndex = 1;
             tableLayoutPanel1.Paint += tableLayoutPanel1_Paint;
             // 
@@ -115,9 +117,10 @@
             // 
             closeButton.AutoSize = true;
             closeButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            closeButton.Location = new Point(586, 8);
+            closeButton.Location = new Point(663, 11);
+            closeButton.Margin = new Padding(3, 4, 3, 4);
             closeButton.Name = "closeButton";
-            closeButton.Size = new Size(82, 25);
+            closeButton.Size = new Size(101, 30);
             closeButton.TabIndex = 7;
             closeButton.Text = "Close Image";
             closeButton.UseVisualStyleBackColor = true;
@@ -127,9 +130,10 @@
             // 
             fullScreenButton.AutoSize = true;
             fullScreenButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            fullScreenButton.Location = new Point(506, 8);
+            fullScreenButton.Location = new Point(567, 11);
+            fullScreenButton.Margin = new Padding(3, 4, 3, 4);
             fullScreenButton.Name = "fullScreenButton";
-            fullScreenButton.Size = new Size(74, 25);
+            fullScreenButton.Size = new Size(90, 30);
             fullScreenButton.TabIndex = 6;
             fullScreenButton.Text = "Full Screen";
             fullScreenButton.UseVisualStyleBackColor = true;
@@ -138,9 +142,10 @@
             // saveAsButton
             // 
             saveAsButton.AutoSize = true;
-            saveAsButton.Location = new Point(440, 8);
+            saveAsButton.Location = new Point(483, 11);
+            saveAsButton.Margin = new Padding(3, 4, 3, 4);
             saveAsButton.Name = "saveAsButton";
-            saveAsButton.Size = new Size(60, 25);
+            saveAsButton.Size = new Size(78, 33);
             saveAsButton.TabIndex = 5;
             saveAsButton.Text = "Save as";
             saveAsButton.UseVisualStyleBackColor = true;
@@ -149,9 +154,10 @@
             // saveButton
             // 
             saveButton.AutoSize = true;
-            saveButton.Location = new Point(379, 8);
+            saveButton.Location = new Point(414, 11);
+            saveButton.Margin = new Padding(3, 4, 3, 4);
             saveButton.Name = "saveButton";
-            saveButton.Size = new Size(55, 25);
+            saveButton.Size = new Size(63, 33);
             saveButton.TabIndex = 4;
             saveButton.Text = "Save";
             saveButton.UseVisualStyleBackColor = true;
@@ -161,10 +167,9 @@
             // 
             resizeButton.AutoSize = true;
             resizeButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            resizeButton.Location = new Point(324, 7);
-            resizeButton.Margin = new Padding(3, 2, 3, 2);
+            resizeButton.Location = new Point(347, 10);
             resizeButton.Name = "resizeButton";
-            resizeButton.Size = new Size(49, 25);
+            resizeButton.Size = new Size(61, 30);
             resizeButton.TabIndex = 8;
             resizeButton.Text = "Resize";
             resizeButton.UseVisualStyleBackColor = true;
@@ -173,9 +178,10 @@
             // rotateButton
             // 
             rotateButton.AutoSize = true;
-            rotateButton.Location = new Point(255, 8);
+            rotateButton.Location = new Point(269, 11);
+            rotateButton.Margin = new Padding(3, 4, 3, 4);
             rotateButton.Name = "rotateButton";
-            rotateButton.Size = new Size(63, 25);
+            rotateButton.Size = new Size(72, 33);
             rotateButton.TabIndex = 3;
             rotateButton.Text = "Rotate";
             rotateButton.UseVisualStyleBackColor = true;
@@ -185,9 +191,10 @@
             // 
             previousButton.AutoSize = true;
             previousButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            previousButton.Location = new Point(119, 8);
+            previousButton.Location = new Point(112, 11);
+            previousButton.Margin = new Padding(3, 4, 3, 4);
             previousButton.Name = "previousButton";
-            previousButton.Size = new Size(62, 25);
+            previousButton.Size = new Size(74, 30);
             previousButton.TabIndex = 1;
             previousButton.Text = "Previous";
             previousButton.UseVisualStyleBackColor = true;
@@ -197,9 +204,10 @@
             // 
             openButton.AutoSize = true;
             openButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            openButton.Location = new Point(31, 8);
+            openButton.Location = new Point(5, 11);
+            openButton.Margin = new Padding(3, 4, 3, 4);
             openButton.Name = "openButton";
-            openButton.Size = new Size(82, 25);
+            openButton.Size = new Size(101, 30);
             openButton.TabIndex = 0;
             openButton.Text = "Open Image";
             openButton.UseVisualStyleBackColor = true;
@@ -208,9 +216,10 @@
             // nextButton
             // 
             nextButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            nextButton.Location = new Point(187, 8);
+            nextButton.Location = new Point(192, 11);
+            nextButton.Margin = new Padding(3, 4, 3, 4);
             nextButton.Name = "nextButton";
-            nextButton.Size = new Size(62, 23);
+            nextButton.Size = new Size(71, 31);
             nextButton.TabIndex = 2;
             nextButton.Text = "Next";
             nextButton.UseVisualStyleBackColor = true;
@@ -233,8 +242,8 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { imageToolStripMenuItem, viewToolStripMenuItem, propertiesToolStripMenuItem, aboutMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Padding = new Padding(5, 2, 0, 2);
-            menuStrip1.Size = new Size(681, 24);
+            menuStrip1.Padding = new Padding(6, 3, 0, 3);
+            menuStrip1.Size = new Size(778, 30);
             menuStrip1.TabIndex = 2;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -242,126 +251,127 @@
             // 
             imageToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { openMenuItem, saveMenuItem, saveAsMenuItem, closeMenuItem, exitMenuItem });
             imageToolStripMenuItem.Name = "imageToolStripMenuItem";
-            imageToolStripMenuItem.Size = new Size(52, 20);
+            imageToolStripMenuItem.Size = new Size(65, 24);
             imageToolStripMenuItem.Text = "&Image";
             // 
             // openMenuItem
             // 
             openMenuItem.Name = "openMenuItem";
-            openMenuItem.Size = new Size(139, 22);
-            openMenuItem.Text = "&Open Image";
+            openMenuItem.Size = new Size(268, 26);
+            openMenuItem.Text = "Open Image          (Ctrl+O)";
             openMenuItem.Click += openMenuItem_Click;
             // 
             // saveMenuItem
             // 
             saveMenuItem.Name = "saveMenuItem";
-            saveMenuItem.Size = new Size(139, 22);
-            saveMenuItem.Text = "&Save";
+            saveMenuItem.Size = new Size(268, 26);
+            saveMenuItem.Text = "Save                       (Ctrl+S)";
             saveMenuItem.Click += saveMenuItem_Click;
             // 
             // saveAsMenuItem
             // 
             saveAsMenuItem.Name = "saveAsMenuItem";
-            saveAsMenuItem.Size = new Size(139, 22);
-            saveAsMenuItem.Text = "Sa&ve As";
+            saveAsMenuItem.Size = new Size(268, 26);
+            saveAsMenuItem.Text = "Save As                  (Ctrl+A)";
             saveAsMenuItem.Click += saveAsMenuItem_Click;
             // 
             // closeMenuItem
             // 
             closeMenuItem.Name = "closeMenuItem";
-            closeMenuItem.Size = new Size(139, 22);
-            closeMenuItem.Text = "&Close Image";
+            closeMenuItem.Size = new Size(268, 26);
+            closeMenuItem.Text = "Close Image          (Ctrl+L)";
             closeMenuItem.Click += closeMenuItem_Click;
             // 
             // exitMenuItem
             // 
             exitMenuItem.Name = "exitMenuItem";
-            exitMenuItem.Size = new Size(139, 22);
-            exitMenuItem.Text = "&Exit App";
+            exitMenuItem.Size = new Size(268, 26);
+            exitMenuItem.Text = "&Exit App                 (Ctrl+X)";
             exitMenuItem.Click += exitMenuItem_Click;
             // 
             // viewToolStripMenuItem
             // 
             viewToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { fullScreenMenuItem, rotateMenuItem, nextImageMenuItem, previousImageMenuItem, resizeMenuItem });
             viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            viewToolStripMenuItem.Size = new Size(44, 20);
+            viewToolStripMenuItem.Size = new Size(55, 24);
             viewToolStripMenuItem.Text = "&View";
             // 
             // fullScreenMenuItem
             // 
             fullScreenMenuItem.Name = "fullScreenMenuItem";
-            fullScreenMenuItem.Size = new Size(155, 22);
-            fullScreenMenuItem.Text = "&Full Screen";
+            fullScreenMenuItem.Size = new Size(280, 26);
+            fullScreenMenuItem.Text = "Full Screen                (Ctrl+F)";
             fullScreenMenuItem.Click += fullScreenMenuItem_Click;
             // 
             // rotateMenuItem
             // 
             rotateMenuItem.Name = "rotateMenuItem";
-            rotateMenuItem.Size = new Size(155, 22);
-            rotateMenuItem.Text = "&Rotate 90 deg";
+            rotateMenuItem.Size = new Size(280, 26);
+            rotateMenuItem.Text = "Rotate 90 deg          (Ctrl+R)";
             rotateMenuItem.Click += rotateMenuItem_Click;
             // 
             // nextImageMenuItem
             // 
             nextImageMenuItem.Name = "nextImageMenuItem";
-            nextImageMenuItem.Size = new Size(155, 22);
-            nextImageMenuItem.Text = "&Next Image";
+            nextImageMenuItem.Size = new Size(280, 26);
+            nextImageMenuItem.Text = "Next Image              (Ctrl+N)";
             nextImageMenuItem.Click += nextImageMenuItem_Click;
             // 
             // previousImageMenuItem
             // 
             previousImageMenuItem.Name = "previousImageMenuItem";
-            previousImageMenuItem.Size = new Size(155, 22);
-            previousImageMenuItem.Text = "Previo&us Image";
+            previousImageMenuItem.Size = new Size(280, 26);
+            previousImageMenuItem.Text = "Previous Image        (Ctrl+B)";
             previousImageMenuItem.Click += previousImageMenuItem_Click;
             // 
             // resizeMenuItem
             // 
             resizeMenuItem.Name = "resizeMenuItem";
-            resizeMenuItem.Size = new Size(155, 22);
-            resizeMenuItem.Text = "Resi&ze";
+            resizeMenuItem.Size = new Size(280, 26);
+            resizeMenuItem.Text = "Resize                       (Ctrl+Q)";
             // 
             // propertiesToolStripMenuItem
             // 
             propertiesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { backgroundColorMenuItem, resizeSettingsMenuItem });
             propertiesToolStripMenuItem.Name = "propertiesToolStripMenuItem";
-            propertiesToolStripMenuItem.Size = new Size(72, 20);
+            propertiesToolStripMenuItem.Size = new Size(90, 24);
             propertiesToolStripMenuItem.Text = "&Properties";
             // 
             // backgroundColorMenuItem
             // 
             backgroundColorMenuItem.Name = "backgroundColorMenuItem";
-            backgroundColorMenuItem.Size = new Size(180, 22);
-            backgroundColorMenuItem.Text = "&Background Color";
+            backgroundColorMenuItem.Size = new Size(224, 26);
+            backgroundColorMenuItem.Text = "Background Color";
             backgroundColorMenuItem.Click += backgroundColorMenuItem_Click;
             // 
             // resizeSettingsMenuItem
             // 
             resizeSettingsMenuItem.Name = "resizeSettingsMenuItem";
-            resizeSettingsMenuItem.Size = new Size(180, 22);
-            resizeSettingsMenuItem.Text = "Resize Se&ttings";
+            resizeSettingsMenuItem.Size = new Size(224, 26);
+            resizeSettingsMenuItem.Text = "Resize Settings";
             resizeSettingsMenuItem.Click += resizeSettingsMenuItem_Click;
             // 
             // aboutMenuItem
             // 
             aboutMenuItem.Name = "aboutMenuItem";
-            aboutMenuItem.Size = new Size(52, 20);
+            aboutMenuItem.Size = new Size(64, 24);
             aboutMenuItem.Text = "&About";
             aboutMenuItem.Click += aboutMenuItem_Click;
             // 
             // FormMain
             // 
             AllowDrop = true;
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             AutoSize = true;
-            ClientSize = new Size(681, 388);
+            ClientSize = new Size(778, 517);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(pictureBox1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
-            MinimumSize = new Size(638, 48);
+            Margin = new Padding(3, 4, 3, 4);
+            MinimumSize = new Size(727, 48);
             Name = "FormMain";
             Text = "Image Viewer";
             Load += FormMain_Load;

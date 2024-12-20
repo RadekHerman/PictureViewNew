@@ -12,7 +12,8 @@ namespace PictureViewNew
         public FormMain()
         {
             InitializeComponent();
-
+            this.KeyPreview = true;
+            this.KeyDown += FormMain_KeyDown;
         }
 
         private void FormMain_Load(object sender, EventArgs e)
@@ -268,6 +269,72 @@ namespace PictureViewNew
 
             return resizedImage;
         }
+
+        // key down 
+
+        private void FormMain_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.S) // Ctrl+S for Save
+            {
+                saveButton_Click(sender, e);
+                e.Handled = true;
+            }
+
+            else if (e.Control && e.KeyCode == Keys.A) // Ctrl+Z for Save As
+            {
+                saveAsButton_Click(sender, e);
+                e.Handled = true;
+            }
+            else if (e.Control && e.KeyCode == Keys.R) // Ctrl+R for Rotate
+            {
+                rotateButton_Click(sender, e);
+                e.Handled = true;
+            }
+            else if (e.Control && e.KeyCode == Keys.O) // Ctrl+O for Open
+            {
+                openButton_Click(sender, e);
+                e.Handled = true;
+            }
+
+            else if (e.Control && e.KeyCode == Keys.Q) // Ctrl+Q for Resize
+            {
+                resizeButton_Click(sender, e);
+                e.Handled = true;
+            }
+
+            else if (e.Control && e.KeyCode == Keys.X) // Ctrl+X for Exit
+            {
+                exitMenuItem_Click(sender, e);
+                e.Handled = true;
+            }
+
+            else if (e.Control && e.KeyCode == Keys.N) // Ctrl+N for Next
+            {
+                nextButton_Click(sender, e);
+                e.Handled = true;
+            }
+
+            else if (e.Control && e.KeyCode == Keys.B) // Ctrl+X for Previous
+            {
+                previousButton_Click(sender, e);
+                e.Handled = true;
+            }
+
+            else if (e.Control && e.KeyCode == Keys.F) // Ctrl+X for Previous
+            {
+                fullScreenButton_Click(sender, e);
+                e.Handled = true;
+            }
+
+            else if (e.Control && e.KeyCode == Keys.L) // Ctrl+X for Previous
+            {
+                closeButton_Click(sender, e);
+                e.Handled = true;
+            }
+
+        }
+
+
 
         // strip menu methods
         private void openMenuItem_Click(object sender, EventArgs e)
