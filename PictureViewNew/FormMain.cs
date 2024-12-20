@@ -6,8 +6,6 @@ namespace PictureViewNew
         private int currentImageIndex = -1;
         private bool isFullScreen = false;
         private string currentImagePath = string.Empty;
-        //private int maxSize = 1000;
-
 
         public FormMain()
         {

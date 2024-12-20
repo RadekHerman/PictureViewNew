@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             pictureBox1 = new PictureBox();
             tableLayoutPanel1 = new TableLayoutPanel();
             closeButton = new Button();
@@ -366,6 +367,7 @@
             Controls.Add(tableLayoutPanel1);
             Controls.Add(pictureBox1);
             Controls.Add(menuStrip1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
             Margin = new Padding(3, 4, 3, 4);
             MinimumSize = new Size(533, 48);
