@@ -92,14 +92,14 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
             tableLayoutPanel1.Controls.Add(closeButton, 0, 0);
-            tableLayoutPanel1.Controls.Add(fullScreenButton, 1, 0);
             tableLayoutPanel1.Controls.Add(saveAsButton, 2, 0);
             tableLayoutPanel1.Controls.Add(saveButton, 3, 0);
-            tableLayoutPanel1.Controls.Add(resizeButton, 4, 0);
-            tableLayoutPanel1.Controls.Add(rotateButton, 5, 0);
-            tableLayoutPanel1.Controls.Add(previousButton, 7, 0);
             tableLayoutPanel1.Controls.Add(openButton, 8, 0);
-            tableLayoutPanel1.Controls.Add(nextButton, 6, 0);
+            tableLayoutPanel1.Controls.Add(fullScreenButton, 7, 0);
+            tableLayoutPanel1.Controls.Add(previousButton, 6, 0);
+            tableLayoutPanel1.Controls.Add(nextButton, 5, 0);
+            tableLayoutPanel1.Controls.Add(resizeButton, 1, 0);
+            tableLayoutPanel1.Controls.Add(rotateButton, 4, 0);
             tableLayoutPanel1.Cursor = Cursors.Hand;
             tableLayoutPanel1.Dock = DockStyle.Bottom;
             tableLayoutPanel1.Location = new Point(0, 437);
@@ -122,7 +122,7 @@
             closeButton.Margin = new Padding(3, 4, 3, 4);
             closeButton.Name = "closeButton";
             closeButton.Size = new Size(61, 51);
-            closeButton.TabIndex = 7;
+            closeButton.TabIndex = 8;
             closeButton.UseVisualStyleBackColor = true;
             closeButton.Click += closeButton_Click;
             // 
@@ -131,11 +131,11 @@
             fullScreenButton.AutoSize = true;
             fullScreenButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             fullScreenButton.Image = Properties.Resources.full_button2;
-            fullScreenButton.Location = new Point(507, 11);
+            fullScreenButton.Location = new Point(75, 11);
             fullScreenButton.Margin = new Padding(3, 4, 3, 4);
             fullScreenButton.Name = "fullScreenButton";
             fullScreenButton.Size = new Size(61, 51);
-            fullScreenButton.TabIndex = 6;
+            fullScreenButton.TabIndex = 1;
             fullScreenButton.UseVisualStyleBackColor = true;
             fullScreenButton.Click += fullScreenButton_Click;
             // 
@@ -147,7 +147,7 @@
             saveAsButton.Margin = new Padding(3, 4, 3, 4);
             saveAsButton.Name = "saveAsButton";
             saveAsButton.Size = new Size(78, 51);
-            saveAsButton.TabIndex = 5;
+            saveAsButton.TabIndex = 6;
             saveAsButton.UseVisualStyleBackColor = true;
             saveAsButton.Click += saveAsButton_Click;
             // 
@@ -159,7 +159,7 @@
             saveButton.Margin = new Padding(3, 4, 3, 4);
             saveButton.Name = "saveButton";
             saveButton.Size = new Size(63, 51);
-            saveButton.TabIndex = 4;
+            saveButton.TabIndex = 5;
             saveButton.UseVisualStyleBackColor = true;
             saveButton.Click += saveButton_Click;
             // 
@@ -168,10 +168,10 @@
             resizeButton.AutoSize = true;
             resizeButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             resizeButton.Image = Properties.Resources.resize_button2;
-            resizeButton.Location = new Point(287, 10);
+            resizeButton.Location = new Point(507, 10);
             resizeButton.Name = "resizeButton";
             resizeButton.Size = new Size(61, 51);
-            resizeButton.TabIndex = 8;
+            resizeButton.TabIndex = 7;
             resizeButton.UseVisualStyleBackColor = true;
             resizeButton.Click += resizeButton_Click;
             // 
@@ -179,11 +179,11 @@
             // 
             rotateButton.AutoSize = true;
             rotateButton.Image = Properties.Resources.rotate_button2;
-            rotateButton.Location = new Point(209, 11);
+            rotateButton.Location = new Point(276, 11);
             rotateButton.Margin = new Padding(3, 4, 3, 4);
             rotateButton.Name = "rotateButton";
             rotateButton.Size = new Size(72, 51);
-            rotateButton.TabIndex = 3;
+            rotateButton.TabIndex = 4;
             rotateButton.UseVisualStyleBackColor = true;
             rotateButton.Click += rotateButton_Click;
             // 
@@ -192,11 +192,11 @@
             previousButton.AutoSize = true;
             previousButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             previousButton.Image = Properties.Resources.prev_button2;
-            previousButton.Location = new Point(75, 11);
+            previousButton.Location = new Point(142, 11);
             previousButton.Margin = new Padding(3, 4, 3, 4);
             previousButton.Name = "previousButton";
             previousButton.Size = new Size(61, 51);
-            previousButton.TabIndex = 1;
+            previousButton.TabIndex = 2;
             previousButton.UseVisualStyleBackColor = true;
             previousButton.Click += previousButton_Click;
             // 
@@ -218,11 +218,11 @@
             nextButton.AutoSize = true;
             nextButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             nextButton.Image = Properties.Resources.next_button2;
-            nextButton.Location = new Point(142, 11);
+            nextButton.Location = new Point(209, 11);
             nextButton.Margin = new Padding(3, 4, 3, 4);
             nextButton.Name = "nextButton";
             nextButton.Size = new Size(61, 51);
-            nextButton.TabIndex = 2;
+            nextButton.TabIndex = 3;
             nextButton.UseVisualStyleBackColor = true;
             nextButton.Click += nextButton_Click;
             // 
@@ -341,14 +341,14 @@
             // backgroundColorMenuItem
             // 
             backgroundColorMenuItem.Name = "backgroundColorMenuItem";
-            backgroundColorMenuItem.Size = new Size(224, 26);
+            backgroundColorMenuItem.Size = new Size(211, 26);
             backgroundColorMenuItem.Text = "Background Color";
             backgroundColorMenuItem.Click += backgroundColorMenuItem_Click;
             // 
             // resizeSettingsMenuItem
             // 
             resizeSettingsMenuItem.Name = "resizeSettingsMenuItem";
-            resizeSettingsMenuItem.Size = new Size(224, 26);
+            resizeSettingsMenuItem.Size = new Size(211, 26);
             resizeSettingsMenuItem.Text = "Resize Settings";
             resizeSettingsMenuItem.Click += resizeSettingsMenuItem_Click;
             // 
