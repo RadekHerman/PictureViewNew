@@ -126,7 +126,8 @@ namespace PictureViewNew
                 this.FormBorderStyle = FormBorderStyle.Sizable;
                 this.WindowState = FormWindowState.Normal;
                 isFullScreen = false;
-                fullScreenButton.Text = "Full Screen";
+                fullScreenButton.Image = Properties.Resources.full_button2;
+                //fullScreenButton.Text = "Full Screen";
             }
             else
             {
@@ -134,7 +135,8 @@ namespace PictureViewNew
                 this.FormBorderStyle = FormBorderStyle.None;
                 this.WindowState = FormWindowState.Maximized;
                 isFullScreen = true;
-                fullScreenButton.Text = "Exit Full Screen";
+                fullScreenButton.Image = Properties.Resources.fullClose_button2;
+                //fullScreenButton.Text = "Exit Full Screen";
             }
         }
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)

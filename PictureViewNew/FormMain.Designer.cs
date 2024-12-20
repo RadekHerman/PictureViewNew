@@ -73,7 +73,7 @@
             pictureBox1.Location = new Point(0, 30);
             pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(778, 487);
+            pictureBox1.Size = new Size(649, 487);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -102,14 +102,14 @@
             tableLayoutPanel1.Controls.Add(nextButton, 6, 0);
             tableLayoutPanel1.Cursor = Cursors.Hand;
             tableLayoutPanel1.Dock = DockStyle.Bottom;
-            tableLayoutPanel1.Location = new Point(0, 462);
+            tableLayoutPanel1.Location = new Point(0, 437);
             tableLayoutPanel1.Margin = new Padding(3, 4, 3, 4);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.Padding = new Padding(11, 7, 11, 7);
             tableLayoutPanel1.RightToLeft = RightToLeft.Yes;
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Size = new Size(778, 55);
+            tableLayoutPanel1.Size = new Size(649, 80);
             tableLayoutPanel1.TabIndex = 1;
             tableLayoutPanel1.Paint += tableLayoutPanel1_Paint;
             // 
@@ -117,12 +117,12 @@
             // 
             closeButton.AutoSize = true;
             closeButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            closeButton.Location = new Point(663, 11);
+            closeButton.Image = Properties.Resources.close_button2;
+            closeButton.Location = new Point(574, 11);
             closeButton.Margin = new Padding(3, 4, 3, 4);
             closeButton.Name = "closeButton";
-            closeButton.Size = new Size(101, 30);
+            closeButton.Size = new Size(61, 51);
             closeButton.TabIndex = 7;
-            closeButton.Text = "Close Image";
             closeButton.UseVisualStyleBackColor = true;
             closeButton.Click += closeButton_Click;
             // 
@@ -130,36 +130,36 @@
             // 
             fullScreenButton.AutoSize = true;
             fullScreenButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            fullScreenButton.Location = new Point(567, 11);
+            fullScreenButton.Image = Properties.Resources.full_button2;
+            fullScreenButton.Location = new Point(507, 11);
             fullScreenButton.Margin = new Padding(3, 4, 3, 4);
             fullScreenButton.Name = "fullScreenButton";
-            fullScreenButton.Size = new Size(90, 30);
+            fullScreenButton.Size = new Size(61, 51);
             fullScreenButton.TabIndex = 6;
-            fullScreenButton.Text = "Full Screen";
             fullScreenButton.UseVisualStyleBackColor = true;
             fullScreenButton.Click += fullScreenButton_Click;
             // 
             // saveAsButton
             // 
             saveAsButton.AutoSize = true;
-            saveAsButton.Location = new Point(483, 11);
+            saveAsButton.Image = Properties.Resources.saveAs_button2;
+            saveAsButton.Location = new Point(423, 11);
             saveAsButton.Margin = new Padding(3, 4, 3, 4);
             saveAsButton.Name = "saveAsButton";
-            saveAsButton.Size = new Size(78, 33);
+            saveAsButton.Size = new Size(78, 51);
             saveAsButton.TabIndex = 5;
-            saveAsButton.Text = "Save as";
             saveAsButton.UseVisualStyleBackColor = true;
             saveAsButton.Click += saveAsButton_Click;
             // 
             // saveButton
             // 
             saveButton.AutoSize = true;
-            saveButton.Location = new Point(414, 11);
+            saveButton.Image = Properties.Resources.save_button2;
+            saveButton.Location = new Point(354, 11);
             saveButton.Margin = new Padding(3, 4, 3, 4);
             saveButton.Name = "saveButton";
-            saveButton.Size = new Size(63, 33);
+            saveButton.Size = new Size(63, 51);
             saveButton.TabIndex = 4;
-            saveButton.Text = "Save";
             saveButton.UseVisualStyleBackColor = true;
             saveButton.Click += saveButton_Click;
             // 
@@ -167,23 +167,23 @@
             // 
             resizeButton.AutoSize = true;
             resizeButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            resizeButton.Location = new Point(347, 10);
+            resizeButton.Image = Properties.Resources.resize_button2;
+            resizeButton.Location = new Point(287, 10);
             resizeButton.Name = "resizeButton";
-            resizeButton.Size = new Size(61, 30);
+            resizeButton.Size = new Size(61, 51);
             resizeButton.TabIndex = 8;
-            resizeButton.Text = "Resize";
             resizeButton.UseVisualStyleBackColor = true;
             resizeButton.Click += resizeButton_Click;
             // 
             // rotateButton
             // 
             rotateButton.AutoSize = true;
-            rotateButton.Location = new Point(269, 11);
+            rotateButton.Image = Properties.Resources.rotate_button2;
+            rotateButton.Location = new Point(209, 11);
             rotateButton.Margin = new Padding(3, 4, 3, 4);
             rotateButton.Name = "rotateButton";
-            rotateButton.Size = new Size(72, 33);
+            rotateButton.Size = new Size(72, 51);
             rotateButton.TabIndex = 3;
-            rotateButton.Text = "Rotate";
             rotateButton.UseVisualStyleBackColor = true;
             rotateButton.Click += rotateButton_Click;
             // 
@@ -191,12 +191,12 @@
             // 
             previousButton.AutoSize = true;
             previousButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            previousButton.Location = new Point(112, 11);
+            previousButton.Image = Properties.Resources.prev_button2;
+            previousButton.Location = new Point(75, 11);
             previousButton.Margin = new Padding(3, 4, 3, 4);
             previousButton.Name = "previousButton";
-            previousButton.Size = new Size(74, 30);
+            previousButton.Size = new Size(61, 51);
             previousButton.TabIndex = 1;
-            previousButton.Text = "Previous";
             previousButton.UseVisualStyleBackColor = true;
             previousButton.Click += previousButton_Click;
             // 
@@ -204,24 +204,25 @@
             // 
             openButton.AutoSize = true;
             openButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            openButton.Location = new Point(5, 11);
+            openButton.Image = Properties.Resources.open_button2;
+            openButton.Location = new Point(8, 11);
             openButton.Margin = new Padding(3, 4, 3, 4);
             openButton.Name = "openButton";
-            openButton.Size = new Size(101, 30);
+            openButton.Size = new Size(61, 51);
             openButton.TabIndex = 0;
-            openButton.Text = "Open Image";
             openButton.UseVisualStyleBackColor = true;
             openButton.Click += openButton_Click;
             // 
             // nextButton
             // 
+            nextButton.AutoSize = true;
             nextButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            nextButton.Location = new Point(192, 11);
+            nextButton.Image = Properties.Resources.next_button2;
+            nextButton.Location = new Point(142, 11);
             nextButton.Margin = new Padding(3, 4, 3, 4);
             nextButton.Name = "nextButton";
-            nextButton.Size = new Size(71, 31);
+            nextButton.Size = new Size(61, 51);
             nextButton.TabIndex = 2;
-            nextButton.Text = "Next";
             nextButton.UseVisualStyleBackColor = true;
             nextButton.Click += nextButton_Click;
             // 
@@ -243,7 +244,7 @@
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(6, 3, 0, 3);
-            menuStrip1.Size = new Size(778, 30);
+            menuStrip1.Size = new Size(649, 30);
             menuStrip1.TabIndex = 2;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -286,7 +287,7 @@
             // 
             exitMenuItem.Name = "exitMenuItem";
             exitMenuItem.Size = new Size(268, 26);
-            exitMenuItem.Text = "&Exit App                 (Ctrl+X)";
+            exitMenuItem.Text = "Exit App                 (Ctrl+X)";
             exitMenuItem.Click += exitMenuItem_Click;
             // 
             // viewToolStripMenuItem
@@ -365,13 +366,13 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             AutoSize = true;
-            ClientSize = new Size(778, 517);
+            ClientSize = new Size(649, 517);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(pictureBox1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
             Margin = new Padding(3, 4, 3, 4);
-            MinimumSize = new Size(727, 48);
+            MinimumSize = new Size(667, 48);
             Name = "FormMain";
             Text = "Image Viewer";
             Load += FormMain_Load;
