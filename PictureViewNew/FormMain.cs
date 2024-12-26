@@ -149,7 +149,6 @@ namespace PictureViewNew
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
-
         private void rotateButton_Click(object sender, EventArgs e)
         {
             if (pictureBox1.Image == null)
@@ -333,8 +332,6 @@ namespace PictureViewNew
             }
 
         }
-
-
 
         // strip menu methods
         private void openMenuItem_Click(object sender, EventArgs e)

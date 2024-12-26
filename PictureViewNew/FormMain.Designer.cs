@@ -330,7 +330,7 @@
             // 
             // propertiesToolStripMenuItem
             // 
-            propertiesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { backgroundColorMenuItem, resizeSettingsMenuItem });
+            propertiesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { resizeSettingsMenuItem, backgroundColorMenuItem });
             propertiesToolStripMenuItem.Name = "propertiesToolStripMenuItem";
             propertiesToolStripMenuItem.Size = new Size(90, 24);
             propertiesToolStripMenuItem.Text = "&Properties";
