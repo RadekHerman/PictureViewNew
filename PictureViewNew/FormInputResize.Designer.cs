@@ -30,11 +30,11 @@
         {
             messageTextBox = new TextBox();
             label1 = new Label();
-            inputValueTextBox = new TextBox();
+            widthBox = new TextBox();
             okButton = new Button();
             widthLabel = new Label();
             heightLabel = new Label();
-            textBox1 = new TextBox();
+            heightBox = new TextBox();
             SuspendLayout();
             // 
             // messageTextBox
@@ -61,16 +61,16 @@
             label1.TabIndex = 1;
             label1.Text = "label1";
             // 
-            // inputValueTextBox
+            // widthBox
             // 
-            inputValueTextBox.Font = new Font("Arial Narrow", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 238);
-            inputValueTextBox.Location = new Point(109, 69);
-            inputValueTextBox.Margin = new Padding(3, 4, 3, 4);
-            inputValueTextBox.MaxLength = 5;
-            inputValueTextBox.Name = "inputValueTextBox";
-            inputValueTextBox.Size = new Size(151, 35);
-            inputValueTextBox.TabIndex = 2;
-            inputValueTextBox.TextAlign = HorizontalAlignment.Center;
+            widthBox.Font = new Font("Arial Narrow", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            widthBox.Location = new Point(109, 69);
+            widthBox.Margin = new Padding(3, 4, 3, 4);
+            widthBox.MaxLength = 5;
+            widthBox.Name = "widthBox";
+            widthBox.Size = new Size(151, 35);
+            widthBox.TabIndex = 2;
+            widthBox.TextAlign = HorizontalAlignment.Center;
             // 
             // okButton
             // 
@@ -104,24 +104,25 @@
             heightLabel.TabIndex = 5;
             heightLabel.Text = "height";
             // 
-            // textBox1
+            // heightBox
             // 
-            textBox1.Font = new Font("Arial", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 238);
-            textBox1.Location = new Point(110, 127);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(150, 34);
-            textBox1.TabIndex = 6;
+            heightBox.Font = new Font("Arial", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            heightBox.Location = new Point(110, 127);
+            heightBox.MaxLength = 5;
+            heightBox.Name = "heightBox";
+            heightBox.Size = new Size(150, 34);
+            heightBox.TabIndex = 6;
             // 
             // FormInputResize
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(452, 203);
-            Controls.Add(textBox1);
+            Controls.Add(heightBox);
             Controls.Add(heightLabel);
             Controls.Add(widthLabel);
             Controls.Add(okButton);
-            Controls.Add(inputValueTextBox);
+            Controls.Add(widthBox);
             Controls.Add(label1);
             Controls.Add(messageTextBox);
             Margin = new Padding(3, 4, 3, 4);
@@ -138,10 +139,10 @@
 
         private TextBox messageTextBox;
         private Label label1;
-        private TextBox inputValueTextBox;
+        private TextBox widthBox;
         private Button okButton;
         private Label widthLabel;
         private Label heightLabel;
-        private TextBox textBox1;
+        private TextBox heightBox;
     }
 }

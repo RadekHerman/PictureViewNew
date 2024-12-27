@@ -1,8 +1,8 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="PictureViewNew" GeneratedClassName="Settings">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="PictureViewNew.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="UserResizeValue" Type="System.Int32" Scope="User">
+    <Setting Name="UserResizeWidth" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">1000</Value>
     </Setting>
   </Settings>

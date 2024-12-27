@@ -26,12 +26,12 @@ namespace PictureViewNew.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1000")]
-        public int UserResizeValue {
+        public int UserResizeWidth {
             get {
-                return ((int)(this["UserResizeValue"]));
+                return ((int)(this["UserResizeWidth"]));
             }
             set {
-                this["UserResizeValue"] = value;
+                this["UserResizeWidth"] = value;
             }
         }
     }
