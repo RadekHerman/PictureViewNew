@@ -224,7 +224,7 @@ namespace PictureViewNew
         private void resizeButton_Click(object sender, EventArgs e)
         {
             int newWidth = FormInputResize.resizeWidth;
-            int newHeight = FormInputResize.resizeHeight;
+            //int newHeight = FormInputResize.resizeHeight;
 
             if (pictureBox1.Image == null)
             {
@@ -236,7 +236,7 @@ namespace PictureViewNew
             {
                 try
                 {
-                    Bitmap processedImage = ResizeImage(tempBitmap, newWidth, newHeight);
+                    Bitmap processedImage = ResizeImage(tempBitmap, newWidth);
                     pictureBox1.Image = processedImage;
                     MessageBox.Show($"The image has been resized to");
                 }
@@ -247,11 +247,12 @@ namespace PictureViewNew
             }
         }
 
-        private Bitmap ResizeImage(Bitmap image, int newWidth, int newHeight)
+        private Bitmap ResizeImage(Bitmap image, int newWidth)
         {
-            //float scale = Math.Min((float)targetSize / image.Width, (float)targetSize / image.Height);
-            //int newWidth = (int)(image.Width * scale);
-            //int newHeight = (int)(image.Height * scale);
+            float scale = (float)newWidth / image.Width;
+            // height needs to be calculated here anyway
+            // to avoid bad resizing when picture is changed
+            int newHeight = (int)(image.Height * scale);
 
             Bitmap resizedImage = new Bitmap(newWidth, newHeight);
 
