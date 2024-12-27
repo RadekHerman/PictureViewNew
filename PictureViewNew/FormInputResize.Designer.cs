@@ -42,15 +42,15 @@
             messageTextBox.BorderStyle = BorderStyle.None;
             messageTextBox.Enabled = false;
             messageTextBox.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 238);
-            messageTextBox.Location = new Point(12, 21);
+            messageTextBox.Location = new Point(12, 4);
             messageTextBox.Margin = new Padding(3, 4, 3, 4);
             messageTextBox.Multiline = true;
             messageTextBox.Name = "messageTextBox";
             messageTextBox.ReadOnly = true;
-            messageTextBox.Size = new Size(435, 40);
+            messageTextBox.Size = new Size(435, 66);
             messageTextBox.TabIndex = 0;
             messageTextBox.TabStop = false;
-            messageTextBox.Text = "Please ender desired height and width.";
+            messageTextBox.Text = "Please enter desired height and width. The values will keep proportion.";
             // 
             // label1
             // 
@@ -75,12 +75,12 @@
             // okButton
             // 
             okButton.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 238);
-            okButton.Location = new Point(331, 96);
+            okButton.Location = new Point(296, 96);
             okButton.Margin = new Padding(3, 4, 3, 4);
             okButton.Name = "okButton";
-            okButton.Size = new Size(75, 39);
+            okButton.Size = new Size(110, 39);
             okButton.TabIndex = 3;
-            okButton.Text = "OK!";
+            okButton.Text = "Submit";
             okButton.UseVisualStyleBackColor = true;
             okButton.Click += okButton_Click;
             // 

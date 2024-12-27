@@ -238,7 +238,7 @@ namespace PictureViewNew
                 {
                     Bitmap processedImage = ResizeImage(tempBitmap, newWidth);
                     pictureBox1.Image = processedImage;
-                    MessageBox.Show($"The image has been resized to");
+                    MessageBox.Show($"The image has been resized.");
                 }
                 catch (Exception)
                 {
