@@ -112,6 +112,7 @@
             heightBox.Name = "heightBox";
             heightBox.Size = new Size(150, 34);
             heightBox.TabIndex = 6;
+            heightBox.TextAlign = HorizontalAlignment.Center;
             // 
             // FormInputResize
             // 

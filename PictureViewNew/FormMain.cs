@@ -228,7 +228,7 @@ namespace PictureViewNew
 
             if (pictureBox1.Image == null)
             {
-                MessageBox.Show("Please open a picture first.");
+                MessageBox.Show("Please load an image first.");
                 return;
             }
 
@@ -398,10 +398,19 @@ namespace PictureViewNew
 
         private void resizeSettingsMenuItem_Click(object sender, EventArgs e)
         {
-            FormInputResize form2 = new FormInputResize(pictureBox1.Image.Width, pictureBox1.Image.Height);
-            if (form2.ShowDialog() == DialogResult.OK)
+            if (pictureBox1.Image != null)
             {
-                //MessageBox.Show($"Resize set to: {FormInputResize.resizeValue}");
+                FormInputResize form2 = new FormInputResize(pictureBox1.Image.Width, pictureBox1.Image.Height);
+                if (form2.ShowDialog() == DialogResult.OK)
+                {
+                    //MessageBox.Show($"Resize set to: {FormInputResize.resizeValue}");
+                }
+     
+            }
+            else
+            {
+                MessageBox.Show("Please load an image first.");
+                return;
             }
         }
     }
