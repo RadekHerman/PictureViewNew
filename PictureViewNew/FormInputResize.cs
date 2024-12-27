@@ -1,12 +1,13 @@
-﻿namespace PictureViewNew
+﻿using System.Windows.Forms;
+
+namespace PictureViewNew
 {
     public partial class FormInputResize : Form
     {
 
-        int pictureWidth = 2000;
-        int pictureHeight = 1500;
+        int pictureWidth;
+        int pictureHeight;
 
-     
         public static int resizeWidth
         {
             get
@@ -23,17 +24,14 @@
         public static int resizeHeight { get; set; }
 
    
-        public FormInputResize()
+        public FormInputResize(int width, int height)
         {
             InitializeComponent();
+            pictureWidth = width;
+            pictureHeight = height;
             widthBox.Text = resizeWidth.ToString();
-            //heightBox.Text = resizeHeight.ToString();
             widthBox.KeyPress += inputDigitsOnly_KeyPress;
-            //widthBox.KeyDown += inputValueTextBox_KeyDown;
             heightBox.KeyPress += inputDigitsOnly_KeyPress;
-            //heightBox.KeyDown += inputValueTextBox_KeyDown;
-            //widthBox.Text = pictureWidth.ToString();
-            //heightBox.Text = pictureHeight.ToString();
             widthBox.KeyDown += widthBox_KeyDown;
             heightBox.KeyDown += heightBox_KeyDown;
             widthBox.Leave += widthBox_Leave;
@@ -80,7 +78,6 @@
                     resizeHeight = (int)(pictureHeight * scale);
                     heightBox.Text = resizeHeight.ToString();
                 }
-
                 e.SuppressKeyPress = true;
             }
         }

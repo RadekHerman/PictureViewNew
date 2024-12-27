@@ -397,7 +397,7 @@ namespace PictureViewNew
 
         private void resizeSettingsMenuItem_Click(object sender, EventArgs e)
         {
-            FormInputResize form2 = new FormInputResize();
+            FormInputResize form2 = new FormInputResize(pictureBox1.Image.Width, pictureBox1.Image.Height);
             if (form2.ShowDialog() == DialogResult.OK)
             {
                 //MessageBox.Show($"Resize set to: {FormInputResize.resizeValue}");
