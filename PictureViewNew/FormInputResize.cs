@@ -67,6 +67,7 @@ namespace PictureViewNew
             heightBox_KeyDown(sender, enterKeyEvent);
         }
 
+
         private void widthBox_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -75,7 +76,7 @@ namespace PictureViewNew
                 {
                     resizeWidth = Convert.ToInt32(widthBox.Text);
                     float scale = (float)resizeWidth / pictureWidth;
-                    resizeHeight = (int)(pictureHeight * scale);
+                    resizeHeight = (int)Math.Round(pictureHeight * scale);
                     heightBox.Text = resizeHeight.ToString();
                 }
                 e.SuppressKeyPress = true;
@@ -90,7 +91,7 @@ namespace PictureViewNew
                 {
                     resizeHeight = Convert.ToInt32(heightBox.Text);
                     float scale = (float)resizeHeight / pictureHeight;
-                    resizeWidth = (int)(pictureWidth * scale);
+                    resizeWidth = (int)Math.Round(pictureWidth * scale);
                     widthBox.Text = resizeWidth.ToString();
                 }
                 e.SuppressKeyPress = true;
