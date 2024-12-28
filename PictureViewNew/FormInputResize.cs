@@ -5,9 +5,9 @@ namespace PictureViewNew
     public partial class FormInputResize : Form
     {
 
-        int pictureWidth;
-        int pictureHeight;
-
+        private int pictureWidth;
+        private int pictureHeight;
+        public static int resizeHeight { get; set; }
         public static int resizeWidth
         {
             get
@@ -21,9 +21,6 @@ namespace PictureViewNew
             }
         }
 
-        public static int resizeHeight { get; set; }
-
-   
         public FormInputResize(int width, int height)
         {
             InitializeComponent();

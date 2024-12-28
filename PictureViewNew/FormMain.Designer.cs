@@ -56,8 +56,8 @@
             previousImageMenuItem = new ToolStripMenuItem();
             resizeMenuItem = new ToolStripMenuItem();
             propertiesToolStripMenuItem = new ToolStripMenuItem();
-            backgroundColorMenuItem = new ToolStripMenuItem();
             resizeSettingsMenuItem = new ToolStripMenuItem();
+            backgroundColorMenuItem = new ToolStripMenuItem();
             aboutMenuItem = new ToolStripMenuItem();
             colorDialog1 = new ColorDialog();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -112,7 +112,6 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 55F));
             tableLayoutPanel1.Size = new Size(515, 61);
             tableLayoutPanel1.TabIndex = 1;
-            tableLayoutPanel1.Paint += tableLayoutPanel1_Paint;
             // 
             // closeButton
             // 
@@ -335,19 +334,19 @@
             propertiesToolStripMenuItem.Size = new Size(90, 24);
             propertiesToolStripMenuItem.Text = "&Properties";
             // 
-            // backgroundColorMenuItem
-            // 
-            backgroundColorMenuItem.Name = "backgroundColorMenuItem";
-            backgroundColorMenuItem.Size = new Size(211, 26);
-            backgroundColorMenuItem.Text = "Background Color";
-            backgroundColorMenuItem.Click += backgroundColorMenuItem_Click;
-            // 
             // resizeSettingsMenuItem
             // 
             resizeSettingsMenuItem.Name = "resizeSettingsMenuItem";
             resizeSettingsMenuItem.Size = new Size(211, 26);
             resizeSettingsMenuItem.Text = "Resize Settings";
             resizeSettingsMenuItem.Click += resizeSettingsMenuItem_Click;
+            // 
+            // backgroundColorMenuItem
+            // 
+            backgroundColorMenuItem.Name = "backgroundColorMenuItem";
+            backgroundColorMenuItem.Size = new Size(211, 26);
+            backgroundColorMenuItem.Text = "Background Color";
+            backgroundColorMenuItem.Click += backgroundColorMenuItem_Click;
             // 
             // aboutMenuItem
             // 

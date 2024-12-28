@@ -50,7 +50,7 @@
             messageTextBox.Size = new Size(435, 66);
             messageTextBox.TabIndex = 0;
             messageTextBox.TabStop = false;
-            messageTextBox.Text = "Please enter desired height and width. The values will keep proportion.";
+            messageTextBox.Text = "Please enter desired height and width. The values will remain proportional.";
             // 
             // label1
             // 

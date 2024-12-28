@@ -19,11 +19,6 @@ namespace PictureViewNew
 
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void openButton_Click(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
@@ -59,7 +54,6 @@ namespace PictureViewNew
         {
             try
             {
-                // Dispose of any previous image if it's already loaded
                 if (pictureBox1.Image != null)
                 {
                     pictureBox1.Image.Dispose();
@@ -264,12 +258,10 @@ namespace PictureViewNew
 
                 graphics.DrawImage(image, 0, 0, newWidth, newHeight);
             }
-
             return resizedImage;
         }
 
         // key down 
-
         private void FormMain_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Control && e.KeyCode == Keys.S) // Ctrl+S for Save
@@ -404,7 +396,6 @@ namespace PictureViewNew
                 {
                     //MessageBox.Show($"Resize set to: {FormInputResize.resizeValue}");
                 }
-     
             }
             else
             {
