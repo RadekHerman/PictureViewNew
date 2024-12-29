@@ -1,3 +1,5 @@
+using System.IO;
+
 namespace PictureViewNew
 {
     public partial class FormMain : Form
@@ -7,11 +9,25 @@ namespace PictureViewNew
         private bool isFullScreen = false;
         private string currentImagePath = string.Empty;
 
-        public FormMain()
+        public FormMain(string imagePath = null)
         {
             InitializeComponent();
             this.KeyPreview = true;
             this.KeyDown += FormMain_KeyDown;
+
+            if (!string.IsNullOrEmpty(imagePath))
+            {
+                try
+                {
+                    LoadImage(imagePath);
+                    string directory = Path.GetDirectoryName(imagePath) ?? Environment.CurrentDirectory;
+                    LoadImageFolder(directory);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Failed to open image: {ex.Message}");
+                }
+            }
         }
 
         private void FormMain_Load(object sender, EventArgs e)
